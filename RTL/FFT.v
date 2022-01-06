@@ -24,7 +24,7 @@
 
 module FFT(
 		input wire clk,
-		input wire  rst_n,
+		input wire  reset,
 		input wire in_valid,
 		input wire signed [11:0] din_r,
 		input wire signed [11:0] din_i,
@@ -108,7 +108,7 @@ radix2 radix_no1(
 	);
 
 shift_16 shift_16(
-		.clk(clk),.rst_n(rst_n),
+		.clk(clk),.reset(reset),
 		.in_valid(in_valid_reg),
 		.din_r(radix_no1_delay_r),
 		.din_i(radix_no1_delay_i),
@@ -119,7 +119,7 @@ shift_16 shift_16(
 ROM_16 rom16(
 		.clk(clk),
 		.in_valid(in_valid_reg),
-		.rst_n(rst_n),
+		.reset(reset),
 		.w_r(rom16_w_r),
 		.w_i(rom16_w_i),
 		.state(rom16_state)
@@ -141,7 +141,7 @@ radix2 radix_no2(
 	);
 
 shift_8 shift_8(
-		.clk(clk),.rst_n(rst_n),
+		.clk(clk),.reset(reset),
 		.in_valid(radix_no1_outvalid),
 		.din_r(radix_no2_delay_r),
 		.din_i(radix_no2_delay_i),
@@ -152,7 +152,7 @@ shift_8 shift_8(
 ROM_8 rom8(
 		.clk(clk),
 		.in_valid(radix_no1_outvalid),
-		.rst_n(rst_n),
+		.reset(reset),
 		.w_r(rom8_w_r),
 		.w_i(rom8_w_i),
 		.state(rom8_state)
@@ -175,7 +175,7 @@ radix2 radix_no3(
 	);
 
 shift_4 shift_4(
-		.clk(clk),.rst_n(rst_n),
+		.clk(clk),.reset(reset),
 		.in_valid(radix_no2_outvalid),
 		.din_r(radix_no3_delay_r),
 		.din_i(radix_no3_delay_i),
@@ -186,7 +186,7 @@ shift_4 shift_4(
 ROM_4 rom4(
 		.clk(clk),
 		.in_valid(radix_no2_outvalid),
-		.rst_n(rst_n),
+		.reset(reset),
 		.w_r(rom4_w_r),
 		.w_i(rom4_w_i),
 		.state(rom4_state)
@@ -209,7 +209,7 @@ radix2 radix_no4(
 	);
 
 shift_2 shift_2(
-		.clk(clk),.rst_n(rst_n),
+		.clk(clk),.reset(reset),
 		.in_valid(radix_no3_outvalid),
 		.din_r(radix_no4_delay_r),
 		.din_i(radix_no4_delay_i),
@@ -220,7 +220,7 @@ shift_2 shift_2(
 ROM_2 rom2(
 		.clk(clk),
 		.in_valid(radix_no3_outvalid),
-		.rst_n(rst_n),
+		.reset(reset),
 		.w_r(rom2_w_r),
 		.w_i(rom2_w_i),
 		.state(rom2_state)
@@ -243,7 +243,7 @@ radix2 radix_no5(
 	);
 
 shift_1 shift_1(
-		.clk(clk),.rst_n(rst_n),
+		.clk(clk),.reset(reset),
 		.in_valid(radix_no4_outvalid),
 		.din_r(radix_no5_delay_r),
 		.din_i(radix_no5_delay_i),
@@ -251,31 +251,8 @@ shift_1 shift_1(
 		.dout_i(shift_1_dout_i)
 	);
 
-	always@(*)begin
-
-		next_r4_valid = radix_no4_outvalid;
-		if (r4_valid)next_s5_count = s5_count + 1;
-		else next_s5_count = s5_count;
-		
-		if(r4_valid && s5_count == 1'b0)no5_state = 2'b01;
-		else if(r4_valid && s5_count == 1'b1)no5_state = 2'b10;
-		else no5_state = 2'b00;
-
-		if(radix_no4_outvalid) next_count_y = count_y + 5'd1;
-		else next_count_y = count_y;
-
-		if(next_out_valid) begin
-			next_dout_r = result_r[y_1_delay];
-			next_dout_i = result_i[y_1_delay];
-		end
-		else begin
-			next_dout_r = dout_r;
-			next_dout_i = dout_i;
-		end
-	end
-
-	always@(posedge clk or negedge rst_n)begin
-		if(~rst_n)begin
+	always@(posedge clk or posedge reset)begin
+		if(reset)begin
 			din_r_reg <= 0;
 			din_i_reg <= 0;
 			in_valid_reg <= 0;
@@ -310,7 +287,29 @@ shift_1 shift_1(
 			end
 		end
 	end
+	always@(*)begin
 
+		next_r4_valid = radix_no4_outvalid;
+		if (r4_valid)next_s5_count = s5_count + 1;
+		else next_s5_count = s5_count;
+		
+		if(r4_valid && s5_count == 1'b0)no5_state = 2'b01;
+		else if(r4_valid && s5_count == 1'b1)no5_state = 2'b10;
+		else no5_state = 2'b00;
+
+		if(radix_no4_outvalid) next_count_y = count_y + 5'd1;
+		else next_count_y = count_y;
+
+		if(next_out_valid) begin
+			next_dout_r = result_r[y_1_delay];
+			next_dout_i = result_i[y_1_delay];
+		end
+		else begin
+			next_dout_r = dout_r;
+			next_dout_i = dout_i;
+		end
+	end
+	
 	always @(*) begin
 
 		next_over = over;
