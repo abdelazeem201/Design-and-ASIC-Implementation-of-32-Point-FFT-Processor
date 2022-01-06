@@ -1,3 +1,15 @@
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------
+// Author: Ahmed Abdelazeem
+// Github: https://github.com/abdelazeem201
+// Email: ahmed_abdelazeem@outlook.com
+// Description: ROM_2 module
+// Dependencies: 
+// Since: 2021-12-20 05:06:05
+// LastEditors: ahmed abdelazeem
+// ********************************************************************
+// Module Function
 module ROM_2(
 		input wire clk,
 		input wire in_valid,
