@@ -7,7 +7,6 @@
 // Description: ROM_2 module
 // Dependencies: 
 // Since: 2021-12-20 05:06:05
-// LastEditors: ahmed abdelazeem
 // ********************************************************************
 // Module Function
 module ROM_2(
