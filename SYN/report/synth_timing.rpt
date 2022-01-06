@@ -1,0 +1,1705 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : FFT
+Version: K-2015.06
+Date   : Sat Jan  1 11:36:54 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WCCOM   Library: fsc0h_d_generic_core_ss1p08v125c
+Wire Load Model Mode: enclosed
+
+
+  Startpoint: clk_r_REG2299_S2
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: clk_r_REG213_S14
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+  radix2_4           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_3           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_2           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_1           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+  radix2_0           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG2299_S2/CK (QDFFRBCHD)          0.00 #     0.50 r
+  clk_r_REG2299_S2/Q (QDFFRBCHD)           0.34       0.84 r
+  U6920/O (INVDHD)                         0.09       0.93 f
+  U3471/O (ND2HHD)                         0.16       1.08 r
+  U3323/O (INVCKMHD)                       0.13       1.21 f
+  U4350/O (OA13HHD)                        0.16       1.37 f
+  U3680/O (AO12EHD)                        0.20       1.57 f
+  radix_no1/w_i[2] (radix2_4)              0.00       1.57 f
+  radix_no1/U680/O (BUFMHD)                0.13       1.71 f
+  radix_no1/U657/O (XOR2KHD)               0.20       1.91 r
+  radix_no1/U983/O (AN3EHD)                0.49       2.39 r
+  radix_no1/U591/O (AOI222BHD)             0.15       2.54 f
+  radix_no1/U696/O (OAI12CHD)              0.14       2.68 r
+  radix_no1/U697/O (XOR2CHD)               0.21       2.89 f
+  radix_no1/U863/C (HA1EHD)                0.12       3.01 f
+  radix_no1/U253/CO (FA1EHD)               0.19       3.20 f
+  radix_no1/U563/CO (FA1EHD)               0.20       3.40 f
+  radix_no1/U309/CO (FA1EHD)               0.20       3.60 f
+  radix_no1/U376/CO (FA1EHD)               0.20       3.80 f
+  radix_no1/U989/CO (FA1EHD)               0.20       4.00 f
+  radix_no1/U988/CO (FA1EHD)               0.20       4.20 f
+  radix_no1/U987/CO (FA1EHD)               0.20       4.39 f
+  radix_no1/U986/CO (FA1EHD)               0.20       4.59 f
+  radix_no1/U985/CO (FA1EHD)               0.20       4.79 f
+  radix_no1/U984/CO (FA1EHD)               0.21       5.00 f
+  radix_no1/U597/O (ND2DHD)                0.09       5.09 r
+  radix_no1/U599/O (ND3EHD)                0.11       5.20 f
+  radix_no1/U647/O (ND2HHD)                0.08       5.28 r
+  radix_no1/U648/O (ND3EHD)                0.07       5.35 f
+  radix_no1/U980/CO (FA1EHD)               0.20       5.55 f
+  radix_no1/U1013/CO (FA1EHD)              0.20       5.75 f
+  radix_no1/U1103/CO (FA1EHD)              0.20       5.95 f
+  radix_no1/U1106/CO (FA1EHD)              0.20       6.15 f
+  radix_no1/U1101/CO (FA1EHD)              0.20       6.35 f
+  radix_no1/U95/CO (FA1EHD)                0.20       6.54 f
+  radix_no1/U1098/CO (FA1EHD)              0.21       6.75 f
+  radix_no1/U1097/S (FA1DHD)               0.38       7.13 r
+  radix_no1/U1110/O (ND2DHD)               0.09       7.22 f
+  radix_no1/U133/O (ND2DHD)                0.09       7.31 r
+  radix_no1/U1125/O (XOR2HHD)              0.18       7.49 f
+  radix_no1/U234/O (AO12HHD)               0.16       7.65 f
+  radix_no1/op_i[22] (radix2_4)            0.00       7.65 f
+  radix_no2/din_b_i[22] (radix2_3)         0.00       7.65 f
+  radix_no2/U447/O (ND2DHD)                0.11       7.76 r
+  radix_no2/U2805/O (ND2HHD)               0.06       7.82 f
+  radix_no2/U1208/O (XNR2CHD)              0.16       7.99 f
+  radix_no2/U1207/O (AO22HHD)              0.24       8.23 f
+  radix_no2/op_i[22] (radix2_3)            0.00       8.23 f
+  radix_no3/din_b_i[22] (radix2_2)         0.00       8.23 f
+  radix_no3/U11/O (ND2CHD)                 0.12       8.35 r
+  radix_no3/U1130/O (ND2DHD)               0.10       8.44 f
+  radix_no3/U189/O (XOR2EHD)               0.19       8.64 r
+  radix_no3/U1257/O (ND2HHD)               0.06       8.70 f
+  radix_no3/U458/O (ND2KHD)                0.10       8.80 r
+  radix_no3/op_i[22] (radix2_2)            0.00       8.80 r
+  radix_no4/din_b_i[22] (radix2_1)         0.00       8.80 r
+  radix_no4/U89/O (NR2EHD)                 0.07       8.86 f
+  radix_no4/U473/O (OAI12CHD)              0.12       8.99 r
+  radix_no4/U88/O (XNR2CHD)                0.23       9.22 f
+  radix_no4/U87/O (AO22HHD)                0.21       9.42 f
+  radix_no4/op_i[23] (radix2_1)            0.00       9.42 f
+  radix_no5/din_b_i[23] (radix2_0)         0.00       9.42 f
+  radix_no5/U71/O (NR2GHD)                 0.07       9.49 r
+  radix_no5/U359/O (INVGHD)                0.03       9.52 f
+  radix_no5/U360/O (ND2HHD)                0.05       9.57 r
+  radix_no5/U419/O (XOR2HHD)               0.14       9.72 f
+  radix_no5/U123/O (AO22HHD)               0.17       9.89 f
+  radix_no5/op_i[23] (radix2_0)            0.00       9.89 f
+  U4123/O (ND2KHD)                         0.18      10.07 r
+  U4170/O (OAI22CHD)                       0.11      10.18 f
+  clk_r_REG213_S14/D (QDFFRBCHD)           0.00      10.18 f
+  data arrival time                                  10.18
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  clk_r_REG213_S14/CK (QDFFRBCHD)          0.00      10.40 r
+  library setup time                      -0.22      10.18
+  data required time                                 10.18
+  -----------------------------------------------------------
+  data required time                                 10.18
+  data arrival time                                 -10.18
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: clk_r_REG2299_S2
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: clk_r_REG206_S14
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+  radix2_4           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_3           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_2           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_1           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+  radix2_0           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG2299_S2/CK (QDFFRBCHD)          0.00 #     0.50 r
+  clk_r_REG2299_S2/Q (QDFFRBCHD)           0.34       0.84 r
+  U6920/O (INVDHD)                         0.09       0.93 f
+  U3471/O (ND2HHD)                         0.16       1.08 r
+  U3323/O (INVCKMHD)                       0.13       1.21 f
+  U4350/O (OA13HHD)                        0.16       1.37 f
+  U3680/O (AO12EHD)                        0.20       1.57 f
+  radix_no1/w_i[2] (radix2_4)              0.00       1.57 f
+  radix_no1/U680/O (BUFMHD)                0.13       1.71 f
+  radix_no1/U657/O (XOR2KHD)               0.20       1.91 r
+  radix_no1/U983/O (AN3EHD)                0.49       2.39 r
+  radix_no1/U591/O (AOI222BHD)             0.15       2.54 f
+  radix_no1/U696/O (OAI12CHD)              0.14       2.68 r
+  radix_no1/U697/O (XOR2CHD)               0.21       2.89 f
+  radix_no1/U863/C (HA1EHD)                0.12       3.01 f
+  radix_no1/U253/CO (FA1EHD)               0.19       3.20 f
+  radix_no1/U563/CO (FA1EHD)               0.20       3.40 f
+  radix_no1/U309/CO (FA1EHD)               0.20       3.60 f
+  radix_no1/U376/CO (FA1EHD)               0.20       3.80 f
+  radix_no1/U989/CO (FA1EHD)               0.20       4.00 f
+  radix_no1/U988/CO (FA1EHD)               0.20       4.20 f
+  radix_no1/U987/CO (FA1EHD)               0.20       4.39 f
+  radix_no1/U986/CO (FA1EHD)               0.20       4.59 f
+  radix_no1/U985/CO (FA1EHD)               0.20       4.79 f
+  radix_no1/U984/CO (FA1EHD)               0.21       5.00 f
+  radix_no1/U597/O (ND2DHD)                0.09       5.09 r
+  radix_no1/U599/O (ND3EHD)                0.11       5.20 f
+  radix_no1/U647/O (ND2HHD)                0.08       5.28 r
+  radix_no1/U648/O (ND3EHD)                0.07       5.35 f
+  radix_no1/U980/CO (FA1EHD)               0.20       5.55 f
+  radix_no1/U1013/CO (FA1EHD)              0.20       5.75 f
+  radix_no1/U1103/CO (FA1EHD)              0.20       5.95 f
+  radix_no1/U1106/CO (FA1EHD)              0.20       6.15 f
+  radix_no1/U1101/CO (FA1EHD)              0.20       6.35 f
+  radix_no1/U95/CO (FA1EHD)                0.20       6.54 f
+  radix_no1/U1098/CO (FA1EHD)              0.21       6.75 f
+  radix_no1/U1097/S (FA1DHD)               0.38       7.13 r
+  radix_no1/U1110/O (ND2DHD)               0.09       7.22 f
+  radix_no1/U133/O (ND2DHD)                0.09       7.31 r
+  radix_no1/U1125/O (XOR2HHD)              0.18       7.49 f
+  radix_no1/U234/O (AO12HHD)               0.16       7.65 f
+  radix_no1/op_i[22] (radix2_4)            0.00       7.65 f
+  radix_no2/din_b_i[22] (radix2_3)         0.00       7.65 f
+  radix_no2/U447/O (ND2DHD)                0.11       7.76 r
+  radix_no2/U2805/O (ND2HHD)               0.06       7.82 f
+  radix_no2/U1208/O (XNR2CHD)              0.16       7.99 f
+  radix_no2/U1207/O (AO22HHD)              0.24       8.23 f
+  radix_no2/op_i[22] (radix2_3)            0.00       8.23 f
+  radix_no3/din_b_i[22] (radix2_2)         0.00       8.23 f
+  radix_no3/U11/O (ND2CHD)                 0.12       8.35 r
+  radix_no3/U1130/O (ND2DHD)               0.10       8.44 f
+  radix_no3/U189/O (XOR2EHD)               0.19       8.64 r
+  radix_no3/U1257/O (ND2HHD)               0.06       8.70 f
+  radix_no3/U458/O (ND2KHD)                0.10       8.80 r
+  radix_no3/op_i[22] (radix2_2)            0.00       8.80 r
+  radix_no4/din_b_i[22] (radix2_1)         0.00       8.80 r
+  radix_no4/U89/O (NR2EHD)                 0.07       8.86 f
+  radix_no4/U473/O (OAI12CHD)              0.12       8.99 r
+  radix_no4/U88/O (XNR2CHD)                0.23       9.22 f
+  radix_no4/U87/O (AO22HHD)                0.21       9.42 f
+  radix_no4/op_i[23] (radix2_1)            0.00       9.42 f
+  radix_no5/din_b_i[23] (radix2_0)         0.00       9.42 f
+  radix_no5/U71/O (NR2GHD)                 0.07       9.49 r
+  radix_no5/U359/O (INVGHD)                0.03       9.52 f
+  radix_no5/U360/O (ND2HHD)                0.05       9.57 r
+  radix_no5/U419/O (XOR2HHD)               0.14       9.72 f
+  radix_no5/U123/O (AO22HHD)               0.17       9.89 f
+  radix_no5/op_i[23] (radix2_0)            0.00       9.89 f
+  U4123/O (ND2KHD)                         0.18      10.07 r
+  U4157/O (OAI22CHD)                       0.11      10.18 f
+  clk_r_REG206_S14/D (DFFRBCHD)            0.00      10.18 f
+  data arrival time                                  10.18
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  clk_r_REG206_S14/CK (DFFRBCHD)           0.00      10.40 r
+  library setup time                      -0.22      10.18
+  data required time                                 10.18
+  -----------------------------------------------------------
+  data required time                                 10.18
+  data arrival time                                 -10.18
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: clk_r_REG2305_S2
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: clk_r_REG25_S14
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+  radix2_4           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_3           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_2           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_1           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+  radix2_0           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG2305_S2/CK (QDFFRBCHD)          0.00 #     0.50 r
+  clk_r_REG2305_S2/Q (QDFFRBCHD)           0.31       0.81 f
+  U3332/O (NR2CHD)                         0.18       0.99 r
+  U3324/O (NR2EHD)                         0.09       1.07 f
+  U3588/O (ND3CHD)                         0.09       1.16 r
+  U3576/O (AN2HHD)                         0.16       1.32 r
+  U5154/O (OR2B1CHD)                       0.17       1.49 r
+  radix_no1/w_r[0] (radix2_4)              0.00       1.49 r
+  radix_no1/U287/O (OR2CHD)                0.20       1.69 r
+  radix_no1/U854/O (INVCHD)                0.06       1.75 f
+  radix_no1/U855/O (OAI12CHD)              0.15       1.90 r
+  radix_no1/U114/O (INVCKGHD)              0.11       2.01 f
+  radix_no1/U77/O (XOR2HHD)                0.27       2.28 r
+  radix_no1/U856/O (XNR2CHD)               0.22       2.50 f
+  radix_no1/U859/O (OAI22CHD)              0.14       2.64 r
+  radix_no1/U241/S (FA1EHD)                0.40       3.04 f
+  radix_no1/U84/CO (FA1DHD)                0.28       3.31 f
+  radix_no1/U240/CO (FA1EHD)               0.19       3.50 f
+  radix_no1/U239/CO (FA1EHD)               0.21       3.71 f
+  radix_no1/U146/CO (FA1EHD)               0.21       3.92 f
+  radix_no1/U675/CO (FA1EHD)               0.21       4.13 f
+  radix_no1/U1380/CO (FA1EHD)              0.18       4.31 f
+  radix_no1/U1378/CO (FA1EHD)              0.21       4.52 f
+  radix_no1/U1368/CO (FA1EHD)              0.21       4.73 f
+  radix_no1/U1374/CO (FA1EHD)              0.21       4.94 f
+  radix_no1/U1373/CO (FA1EHD)              0.21       5.15 f
+  radix_no1/U633/CO (FA1EHD)               0.21       5.35 f
+  radix_no1/U1372/CO (FA1EHD)              0.21       5.56 f
+  radix_no1/U1371/CO (FA1EHD)              0.21       5.77 f
+  radix_no1/U1370/CO (FA1EHD)              0.21       5.98 f
+  radix_no1/U1369/CO (FA1EHD)              0.21       6.19 f
+  radix_no1/U720/S (FA1EHD)                0.29       6.48 f
+  radix_no1/U566/O (AO22CHD)               0.22       6.70 f
+  radix_no1/op_r[17] (radix2_4)            0.00       6.70 f
+  radix_no2/din_b_r[17] (radix2_3)         0.00       6.70 f
+  radix_no2/U1148/O (NR2CHD)               0.16       6.86 r
+  radix_no2/U1238/O (INVDHD)               0.06       6.92 f
+  radix_no2/U1237/O (ND2DHD)               0.07       6.99 r
+  radix_no2/U21/O (XOR2EHD)                0.17       7.16 f
+  radix_no2/U758/O (AO22EHD)               0.20       7.36 f
+  radix_no2/op_r[17] (radix2_3)            0.00       7.36 f
+  radix_no3/din_b_r[17] (radix2_2)         0.00       7.36 f
+  radix_no3/U1207/O (OR2EHD)               0.15       7.50 f
+  radix_no3/U1057/O (ND2DHD)               0.07       7.57 r
+  radix_no3/U1013/O (XNR2CHD)              0.18       7.75 f
+  radix_no3/U1126/O (AO22EHD)              0.24       7.99 f
+  radix_no3/op_r[17] (radix2_2)            0.00       7.99 f
+  radix_no4/din_b_r[17] (radix2_1)         0.00       7.99 f
+  radix_no4/U235/O (ND2DHD)                0.10       8.09 r
+  radix_no4/U205/O (INVDHD)                0.05       8.14 f
+  radix_no4/U96/O (AOI12HHD)               0.20       8.34 r
+  radix_no4/U389/O (OAI12CHD)              0.08       8.42 f
+  radix_no4/U95/O (AOI12CHD)               0.18       8.59 r
+  radix_no4/U390/O (OAI12CHD)              0.13       8.72 f
+  radix_no4/U152/O (AOI12CHD)              0.20       8.92 r
+  radix_no4/U391/O (OAI12CHD)              0.10       9.02 f
+  radix_no4/U237/O (XOR2EHD)               0.22       9.24 r
+  radix_no4/U413/O (MOAI1KHD)              0.15       9.39 f
+  radix_no4/op_r[23] (radix2_1)            0.00       9.39 f
+  radix_no5/din_b_r[23] (radix2_0)         0.00       9.39 f
+  radix_no5/U40/O (OR2HHD)                 0.12       9.50 f
+  radix_no5/U357/O (ND2HHD)                0.05       9.55 r
+  radix_no5/U110/O (XNR2CHD)               0.16       9.71 f
+  radix_no5/U358/O (AO22EHD)               0.17       9.88 f
+  radix_no5/op_r[23] (radix2_0)            0.00       9.88 f
+  U4090/O (ND2KHD)                         0.19      10.07 r
+  U4117/O (OAI22CHD)                       0.11      10.18 f
+  clk_r_REG25_S14/D (QDFFRBCHD)            0.00      10.18 f
+  data arrival time                                  10.18
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  clk_r_REG25_S14/CK (QDFFRBCHD)           0.00      10.40 r
+  library setup time                      -0.22      10.18
+  data required time                                 10.18
+  -----------------------------------------------------------
+  data required time                                 10.18
+  data arrival time                                 -10.18
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: clk_r_REG2305_S2
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: clk_r_REG32_S14
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+  radix2_4           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_3           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_2           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_1           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+  radix2_0           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG2305_S2/CK (QDFFRBCHD)          0.00 #     0.50 r
+  clk_r_REG2305_S2/Q (QDFFRBCHD)           0.31       0.81 f
+  U3332/O (NR2CHD)                         0.18       0.99 r
+  U3324/O (NR2EHD)                         0.09       1.07 f
+  U3588/O (ND3CHD)                         0.09       1.16 r
+  U3576/O (AN2HHD)                         0.16       1.32 r
+  U5154/O (OR2B1CHD)                       0.17       1.49 r
+  radix_no1/w_r[0] (radix2_4)              0.00       1.49 r
+  radix_no1/U287/O (OR2CHD)                0.20       1.69 r
+  radix_no1/U854/O (INVCHD)                0.06       1.75 f
+  radix_no1/U855/O (OAI12CHD)              0.15       1.90 r
+  radix_no1/U114/O (INVCKGHD)              0.11       2.01 f
+  radix_no1/U77/O (XOR2HHD)                0.27       2.28 r
+  radix_no1/U856/O (XNR2CHD)               0.22       2.50 f
+  radix_no1/U859/O (OAI22CHD)              0.14       2.64 r
+  radix_no1/U241/S (FA1EHD)                0.40       3.04 f
+  radix_no1/U84/CO (FA1DHD)                0.28       3.31 f
+  radix_no1/U240/CO (FA1EHD)               0.19       3.50 f
+  radix_no1/U239/CO (FA1EHD)               0.21       3.71 f
+  radix_no1/U146/CO (FA1EHD)               0.21       3.92 f
+  radix_no1/U675/CO (FA1EHD)               0.21       4.13 f
+  radix_no1/U1380/CO (FA1EHD)              0.18       4.31 f
+  radix_no1/U1378/CO (FA1EHD)              0.21       4.52 f
+  radix_no1/U1368/CO (FA1EHD)              0.21       4.73 f
+  radix_no1/U1374/CO (FA1EHD)              0.21       4.94 f
+  radix_no1/U1373/CO (FA1EHD)              0.21       5.15 f
+  radix_no1/U633/CO (FA1EHD)               0.21       5.35 f
+  radix_no1/U1372/CO (FA1EHD)              0.21       5.56 f
+  radix_no1/U1371/CO (FA1EHD)              0.21       5.77 f
+  radix_no1/U1370/CO (FA1EHD)              0.21       5.98 f
+  radix_no1/U1369/CO (FA1EHD)              0.21       6.19 f
+  radix_no1/U720/S (FA1EHD)                0.29       6.48 f
+  radix_no1/U566/O (AO22CHD)               0.22       6.70 f
+  radix_no1/op_r[17] (radix2_4)            0.00       6.70 f
+  radix_no2/din_b_r[17] (radix2_3)         0.00       6.70 f
+  radix_no2/U1148/O (NR2CHD)               0.16       6.86 r
+  radix_no2/U1238/O (INVDHD)               0.06       6.92 f
+  radix_no2/U1237/O (ND2DHD)               0.07       6.99 r
+  radix_no2/U21/O (XOR2EHD)                0.17       7.16 f
+  radix_no2/U758/O (AO22EHD)               0.20       7.36 f
+  radix_no2/op_r[17] (radix2_3)            0.00       7.36 f
+  radix_no3/din_b_r[17] (radix2_2)         0.00       7.36 f
+  radix_no3/U1207/O (OR2EHD)               0.15       7.50 f
+  radix_no3/U1057/O (ND2DHD)               0.07       7.57 r
+  radix_no3/U1013/O (XNR2CHD)              0.18       7.75 f
+  radix_no3/U1126/O (AO22EHD)              0.24       7.99 f
+  radix_no3/op_r[17] (radix2_2)            0.00       7.99 f
+  radix_no4/din_b_r[17] (radix2_1)         0.00       7.99 f
+  radix_no4/U235/O (ND2DHD)                0.10       8.09 r
+  radix_no4/U205/O (INVDHD)                0.05       8.14 f
+  radix_no4/U96/O (AOI12HHD)               0.20       8.34 r
+  radix_no4/U389/O (OAI12CHD)              0.08       8.42 f
+  radix_no4/U95/O (AOI12CHD)               0.18       8.59 r
+  radix_no4/U390/O (OAI12CHD)              0.13       8.72 f
+  radix_no4/U152/O (AOI12CHD)              0.20       8.92 r
+  radix_no4/U391/O (OAI12CHD)              0.10       9.02 f
+  radix_no4/U237/O (XOR2EHD)               0.22       9.24 r
+  radix_no4/U413/O (MOAI1KHD)              0.15       9.39 f
+  radix_no4/op_r[23] (radix2_1)            0.00       9.39 f
+  radix_no5/din_b_r[23] (radix2_0)         0.00       9.39 f
+  radix_no5/U40/O (OR2HHD)                 0.12       9.50 f
+  radix_no5/U357/O (ND2HHD)                0.05       9.55 r
+  radix_no5/U110/O (XNR2CHD)               0.16       9.71 f
+  radix_no5/U358/O (AO22EHD)               0.17       9.88 f
+  radix_no5/op_r[23] (radix2_0)            0.00       9.88 f
+  U4090/O (ND2KHD)                         0.19      10.07 r
+  U4110/O (OAI22CHD)                       0.11      10.18 f
+  clk_r_REG32_S14/D (DFFRBCHD)             0.00      10.18 f
+  data arrival time                                  10.18
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  clk_r_REG32_S14/CK (DFFRBCHD)            0.00      10.40 r
+  library setup time                      -0.22      10.18
+  data required time                                 10.18
+  -----------------------------------------------------------
+  data required time                                 10.18
+  data arrival time                                 -10.18
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: clk_r_REG2299_S2
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: clk_r_REG212_S14
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+  radix2_4           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_3           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_2           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_1           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+  radix2_0           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG2299_S2/CK (QDFFRBCHD)          0.00 #     0.50 r
+  clk_r_REG2299_S2/Q (QDFFRBCHD)           0.34       0.84 r
+  U6920/O (INVDHD)                         0.09       0.93 f
+  U3471/O (ND2HHD)                         0.16       1.08 r
+  U3323/O (INVCKMHD)                       0.13       1.21 f
+  U4350/O (OA13HHD)                        0.16       1.37 f
+  U3680/O (AO12EHD)                        0.20       1.57 f
+  radix_no1/w_i[2] (radix2_4)              0.00       1.57 f
+  radix_no1/U680/O (BUFMHD)                0.13       1.71 f
+  radix_no1/U657/O (XOR2KHD)               0.20       1.91 r
+  radix_no1/U983/O (AN3EHD)                0.49       2.39 r
+  radix_no1/U591/O (AOI222BHD)             0.15       2.54 f
+  radix_no1/U696/O (OAI12CHD)              0.14       2.68 r
+  radix_no1/U697/O (XOR2CHD)               0.21       2.89 f
+  radix_no1/U863/C (HA1EHD)                0.12       3.01 f
+  radix_no1/U253/CO (FA1EHD)               0.19       3.20 f
+  radix_no1/U563/CO (FA1EHD)               0.20       3.40 f
+  radix_no1/U309/CO (FA1EHD)               0.20       3.60 f
+  radix_no1/U376/CO (FA1EHD)               0.20       3.80 f
+  radix_no1/U989/CO (FA1EHD)               0.20       4.00 f
+  radix_no1/U988/CO (FA1EHD)               0.20       4.20 f
+  radix_no1/U987/CO (FA1EHD)               0.20       4.39 f
+  radix_no1/U986/CO (FA1EHD)               0.20       4.59 f
+  radix_no1/U985/CO (FA1EHD)               0.20       4.79 f
+  radix_no1/U984/CO (FA1EHD)               0.21       5.00 f
+  radix_no1/U597/O (ND2DHD)                0.09       5.09 r
+  radix_no1/U599/O (ND3EHD)                0.11       5.20 f
+  radix_no1/U647/O (ND2HHD)                0.08       5.28 r
+  radix_no1/U648/O (ND3EHD)                0.07       5.35 f
+  radix_no1/U980/CO (FA1EHD)               0.20       5.55 f
+  radix_no1/U1013/CO (FA1EHD)              0.20       5.75 f
+  radix_no1/U1103/CO (FA1EHD)              0.20       5.95 f
+  radix_no1/U1106/CO (FA1EHD)              0.20       6.15 f
+  radix_no1/U1101/CO (FA1EHD)              0.20       6.35 f
+  radix_no1/U95/CO (FA1EHD)                0.20       6.54 f
+  radix_no1/U1098/CO (FA1EHD)              0.21       6.75 f
+  radix_no1/U1097/S (FA1DHD)               0.38       7.13 r
+  radix_no1/U1110/O (ND2DHD)               0.09       7.22 f
+  radix_no1/U133/O (ND2DHD)                0.09       7.31 r
+  radix_no1/U1125/O (XOR2HHD)              0.18       7.49 f
+  radix_no1/U234/O (AO12HHD)               0.16       7.65 f
+  radix_no1/op_i[22] (radix2_4)            0.00       7.65 f
+  radix_no2/din_b_i[22] (radix2_3)         0.00       7.65 f
+  radix_no2/U447/O (ND2DHD)                0.11       7.76 r
+  radix_no2/U2805/O (ND2HHD)               0.06       7.82 f
+  radix_no2/U1208/O (XNR2CHD)              0.16       7.99 f
+  radix_no2/U1207/O (AO22HHD)              0.24       8.23 f
+  radix_no2/op_i[22] (radix2_3)            0.00       8.23 f
+  radix_no3/din_b_i[22] (radix2_2)         0.00       8.23 f
+  radix_no3/U11/O (ND2CHD)                 0.12       8.35 r
+  radix_no3/U1130/O (ND2DHD)               0.10       8.44 f
+  radix_no3/U189/O (XOR2EHD)               0.19       8.64 r
+  radix_no3/U1257/O (ND2HHD)               0.06       8.70 f
+  radix_no3/U458/O (ND2KHD)                0.10       8.80 r
+  radix_no3/op_i[22] (radix2_2)            0.00       8.80 r
+  radix_no4/din_b_i[22] (radix2_1)         0.00       8.80 r
+  radix_no4/U89/O (NR2EHD)                 0.07       8.86 f
+  radix_no4/U473/O (OAI12CHD)              0.12       8.99 r
+  radix_no4/U88/O (XNR2CHD)                0.23       9.22 f
+  radix_no4/U87/O (AO22HHD)                0.21       9.42 f
+  radix_no4/op_i[23] (radix2_1)            0.00       9.42 f
+  radix_no5/din_b_i[23] (radix2_0)         0.00       9.42 f
+  radix_no5/U71/O (NR2GHD)                 0.07       9.49 r
+  radix_no5/U359/O (INVGHD)                0.03       9.52 f
+  radix_no5/U360/O (ND2HHD)                0.05       9.57 r
+  radix_no5/U419/O (XOR2HHD)               0.14       9.72 f
+  radix_no5/U123/O (AO22HHD)               0.17       9.89 f
+  radix_no5/op_i[23] (radix2_0)            0.00       9.89 f
+  U4123/O (ND2KHD)                         0.18      10.07 r
+  U4168/O (OAI22CHD)                       0.11      10.18 f
+  clk_r_REG212_S14/D (QDFFRBCHD)           0.00      10.18 f
+  data arrival time                                  10.18
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  clk_r_REG212_S14/CK (QDFFRBCHD)          0.00      10.40 r
+  library setup time                      -0.22      10.18
+  data required time                                 10.18
+  -----------------------------------------------------------
+  data required time                                 10.18
+  data arrival time                                 -10.18
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: clk_r_REG2299_S2
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: clk_r_REG186_S14
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+  radix2_4           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_3           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_2           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_1           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+  radix2_0           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG2299_S2/CK (QDFFRBCHD)          0.00 #     0.50 r
+  clk_r_REG2299_S2/Q (QDFFRBCHD)           0.34       0.84 r
+  U6920/O (INVDHD)                         0.09       0.93 f
+  U3471/O (ND2HHD)                         0.16       1.08 r
+  U3323/O (INVCKMHD)                       0.13       1.21 f
+  U4350/O (OA13HHD)                        0.16       1.37 f
+  U3680/O (AO12EHD)                        0.20       1.57 f
+  radix_no1/w_i[2] (radix2_4)              0.00       1.57 f
+  radix_no1/U680/O (BUFMHD)                0.13       1.71 f
+  radix_no1/U657/O (XOR2KHD)               0.20       1.91 r
+  radix_no1/U983/O (AN3EHD)                0.49       2.39 r
+  radix_no1/U591/O (AOI222BHD)             0.15       2.54 f
+  radix_no1/U696/O (OAI12CHD)              0.14       2.68 r
+  radix_no1/U697/O (XOR2CHD)               0.21       2.89 f
+  radix_no1/U863/C (HA1EHD)                0.12       3.01 f
+  radix_no1/U253/CO (FA1EHD)               0.19       3.20 f
+  radix_no1/U563/CO (FA1EHD)               0.20       3.40 f
+  radix_no1/U309/CO (FA1EHD)               0.20       3.60 f
+  radix_no1/U376/CO (FA1EHD)               0.20       3.80 f
+  radix_no1/U989/CO (FA1EHD)               0.20       4.00 f
+  radix_no1/U988/CO (FA1EHD)               0.20       4.20 f
+  radix_no1/U987/CO (FA1EHD)               0.20       4.39 f
+  radix_no1/U986/CO (FA1EHD)               0.20       4.59 f
+  radix_no1/U985/CO (FA1EHD)               0.20       4.79 f
+  radix_no1/U984/CO (FA1EHD)               0.21       5.00 f
+  radix_no1/U597/O (ND2DHD)                0.09       5.09 r
+  radix_no1/U599/O (ND3EHD)                0.11       5.20 f
+  radix_no1/U647/O (ND2HHD)                0.08       5.28 r
+  radix_no1/U648/O (ND3EHD)                0.07       5.35 f
+  radix_no1/U980/CO (FA1EHD)               0.20       5.55 f
+  radix_no1/U1013/CO (FA1EHD)              0.20       5.75 f
+  radix_no1/U1103/CO (FA1EHD)              0.20       5.95 f
+  radix_no1/U1106/CO (FA1EHD)              0.20       6.15 f
+  radix_no1/U1101/CO (FA1EHD)              0.20       6.35 f
+  radix_no1/U95/CO (FA1EHD)                0.20       6.54 f
+  radix_no1/U1098/CO (FA1EHD)              0.21       6.75 f
+  radix_no1/U1097/S (FA1DHD)               0.38       7.13 r
+  radix_no1/U1110/O (ND2DHD)               0.09       7.22 f
+  radix_no1/U133/O (ND2DHD)                0.09       7.31 r
+  radix_no1/U1125/O (XOR2HHD)              0.18       7.49 f
+  radix_no1/U234/O (AO12HHD)               0.16       7.65 f
+  radix_no1/op_i[22] (radix2_4)            0.00       7.65 f
+  radix_no2/din_b_i[22] (radix2_3)         0.00       7.65 f
+  radix_no2/U447/O (ND2DHD)                0.11       7.76 r
+  radix_no2/U2805/O (ND2HHD)               0.06       7.82 f
+  radix_no2/U1208/O (XNR2CHD)              0.16       7.99 f
+  radix_no2/U1207/O (AO22HHD)              0.24       8.23 f
+  radix_no2/op_i[22] (radix2_3)            0.00       8.23 f
+  radix_no3/din_b_i[22] (radix2_2)         0.00       8.23 f
+  radix_no3/U11/O (ND2CHD)                 0.12       8.35 r
+  radix_no3/U1130/O (ND2DHD)               0.10       8.44 f
+  radix_no3/U189/O (XOR2EHD)               0.19       8.64 r
+  radix_no3/U1257/O (ND2HHD)               0.06       8.70 f
+  radix_no3/U458/O (ND2KHD)                0.10       8.80 r
+  radix_no3/op_i[22] (radix2_2)            0.00       8.80 r
+  radix_no4/din_b_i[22] (radix2_1)         0.00       8.80 r
+  radix_no4/U89/O (NR2EHD)                 0.07       8.86 f
+  radix_no4/U473/O (OAI12CHD)              0.12       8.99 r
+  radix_no4/U88/O (XNR2CHD)                0.23       9.22 f
+  radix_no4/U87/O (AO22HHD)                0.21       9.42 f
+  radix_no4/op_i[23] (radix2_1)            0.00       9.42 f
+  radix_no5/din_b_i[23] (radix2_0)         0.00       9.42 f
+  radix_no5/U71/O (NR2GHD)                 0.07       9.49 r
+  radix_no5/U359/O (INVGHD)                0.03       9.52 f
+  radix_no5/U360/O (ND2HHD)                0.05       9.57 r
+  radix_no5/U419/O (XOR2HHD)               0.14       9.72 f
+  radix_no5/U123/O (AO22HHD)               0.17       9.89 f
+  radix_no5/op_i[23] (radix2_0)            0.00       9.89 f
+  U4123/O (ND2KHD)                         0.18      10.07 r
+  U4125/O (OAI22CHD)                       0.11      10.18 f
+  clk_r_REG186_S14/D (QDFFRBCHD)           0.00      10.18 f
+  data arrival time                                  10.18
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  clk_r_REG186_S14/CK (QDFFRBCHD)          0.00      10.40 r
+  library setup time                      -0.22      10.18
+  data required time                                 10.18
+  -----------------------------------------------------------
+  data required time                                 10.18
+  data arrival time                                 -10.18
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: clk_r_REG2305_S2
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: clk_r_REG26_S14
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+  radix2_4           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_3           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_2           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_1           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+  radix2_0           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG2305_S2/CK (QDFFRBCHD)          0.00 #     0.50 r
+  clk_r_REG2305_S2/Q (QDFFRBCHD)           0.31       0.81 f
+  U3332/O (NR2CHD)                         0.18       0.99 r
+  U3324/O (NR2EHD)                         0.09       1.07 f
+  U3588/O (ND3CHD)                         0.09       1.16 r
+  U3576/O (AN2HHD)                         0.16       1.32 r
+  U5154/O (OR2B1CHD)                       0.17       1.49 r
+  radix_no1/w_r[0] (radix2_4)              0.00       1.49 r
+  radix_no1/U287/O (OR2CHD)                0.20       1.69 r
+  radix_no1/U854/O (INVCHD)                0.06       1.75 f
+  radix_no1/U855/O (OAI12CHD)              0.15       1.90 r
+  radix_no1/U114/O (INVCKGHD)              0.11       2.01 f
+  radix_no1/U77/O (XOR2HHD)                0.27       2.28 r
+  radix_no1/U856/O (XNR2CHD)               0.22       2.50 f
+  radix_no1/U859/O (OAI22CHD)              0.14       2.64 r
+  radix_no1/U241/S (FA1EHD)                0.40       3.04 f
+  radix_no1/U84/CO (FA1DHD)                0.28       3.31 f
+  radix_no1/U240/CO (FA1EHD)               0.19       3.50 f
+  radix_no1/U239/CO (FA1EHD)               0.21       3.71 f
+  radix_no1/U146/CO (FA1EHD)               0.21       3.92 f
+  radix_no1/U675/CO (FA1EHD)               0.21       4.13 f
+  radix_no1/U1380/CO (FA1EHD)              0.18       4.31 f
+  radix_no1/U1378/CO (FA1EHD)              0.21       4.52 f
+  radix_no1/U1368/CO (FA1EHD)              0.21       4.73 f
+  radix_no1/U1374/CO (FA1EHD)              0.21       4.94 f
+  radix_no1/U1373/CO (FA1EHD)              0.21       5.15 f
+  radix_no1/U633/CO (FA1EHD)               0.21       5.35 f
+  radix_no1/U1372/CO (FA1EHD)              0.21       5.56 f
+  radix_no1/U1371/CO (FA1EHD)              0.21       5.77 f
+  radix_no1/U1370/CO (FA1EHD)              0.21       5.98 f
+  radix_no1/U1369/CO (FA1EHD)              0.21       6.19 f
+  radix_no1/U720/S (FA1EHD)                0.29       6.48 f
+  radix_no1/U566/O (AO22CHD)               0.22       6.70 f
+  radix_no1/op_r[17] (radix2_4)            0.00       6.70 f
+  radix_no2/din_b_r[17] (radix2_3)         0.00       6.70 f
+  radix_no2/U1148/O (NR2CHD)               0.16       6.86 r
+  radix_no2/U1238/O (INVDHD)               0.06       6.92 f
+  radix_no2/U1237/O (ND2DHD)               0.07       6.99 r
+  radix_no2/U21/O (XOR2EHD)                0.17       7.16 f
+  radix_no2/U758/O (AO22EHD)               0.20       7.36 f
+  radix_no2/op_r[17] (radix2_3)            0.00       7.36 f
+  radix_no3/din_b_r[17] (radix2_2)         0.00       7.36 f
+  radix_no3/U1207/O (OR2EHD)               0.15       7.50 f
+  radix_no3/U1057/O (ND2DHD)               0.07       7.57 r
+  radix_no3/U1013/O (XNR2CHD)              0.18       7.75 f
+  radix_no3/U1126/O (AO22EHD)              0.24       7.99 f
+  radix_no3/op_r[17] (radix2_2)            0.00       7.99 f
+  radix_no4/din_b_r[17] (radix2_1)         0.00       7.99 f
+  radix_no4/U235/O (ND2DHD)                0.10       8.09 r
+  radix_no4/U205/O (INVDHD)                0.05       8.14 f
+  radix_no4/U96/O (AOI12HHD)               0.20       8.34 r
+  radix_no4/U389/O (OAI12CHD)              0.08       8.42 f
+  radix_no4/U95/O (AOI12CHD)               0.18       8.59 r
+  radix_no4/U390/O (OAI12CHD)              0.13       8.72 f
+  radix_no4/U152/O (AOI12CHD)              0.20       8.92 r
+  radix_no4/U391/O (OAI12CHD)              0.10       9.02 f
+  radix_no4/U237/O (XOR2EHD)               0.22       9.24 r
+  radix_no4/U413/O (MOAI1KHD)              0.15       9.39 f
+  radix_no4/op_r[23] (radix2_1)            0.00       9.39 f
+  radix_no5/din_b_r[23] (radix2_0)         0.00       9.39 f
+  radix_no5/U40/O (OR2HHD)                 0.12       9.50 f
+  radix_no5/U357/O (ND2HHD)                0.05       9.55 r
+  radix_no5/U110/O (XNR2CHD)               0.16       9.71 f
+  radix_no5/U358/O (AO22EHD)               0.17       9.88 f
+  radix_no5/op_r[23] (radix2_0)            0.00       9.88 f
+  U4090/O (ND2KHD)                         0.19      10.07 r
+  U4116/O (OAI22CHD)                       0.11      10.18 f
+  clk_r_REG26_S14/D (QDFFRBCHD)            0.00      10.18 f
+  data arrival time                                  10.18
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  clk_r_REG26_S14/CK (QDFFRBCHD)           0.00      10.40 r
+  library setup time                      -0.22      10.18
+  data required time                                 10.18
+  -----------------------------------------------------------
+  data required time                                 10.18
+  data arrival time                                 -10.18
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: clk_r_REG2305_S2
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: clk_r_REG51_S14
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+  radix2_4           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_3           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_2           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_1           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+  radix2_0           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG2305_S2/CK (QDFFRBCHD)          0.00 #     0.50 r
+  clk_r_REG2305_S2/Q (QDFFRBCHD)           0.31       0.81 f
+  U3332/O (NR2CHD)                         0.18       0.99 r
+  U3324/O (NR2EHD)                         0.09       1.07 f
+  U3588/O (ND3CHD)                         0.09       1.16 r
+  U3576/O (AN2HHD)                         0.16       1.32 r
+  U5154/O (OR2B1CHD)                       0.17       1.49 r
+  radix_no1/w_r[0] (radix2_4)              0.00       1.49 r
+  radix_no1/U287/O (OR2CHD)                0.20       1.69 r
+  radix_no1/U854/O (INVCHD)                0.06       1.75 f
+  radix_no1/U855/O (OAI12CHD)              0.15       1.90 r
+  radix_no1/U114/O (INVCKGHD)              0.11       2.01 f
+  radix_no1/U77/O (XOR2HHD)                0.27       2.28 r
+  radix_no1/U856/O (XNR2CHD)               0.22       2.50 f
+  radix_no1/U859/O (OAI22CHD)              0.14       2.64 r
+  radix_no1/U241/S (FA1EHD)                0.40       3.04 f
+  radix_no1/U84/CO (FA1DHD)                0.28       3.31 f
+  radix_no1/U240/CO (FA1EHD)               0.19       3.50 f
+  radix_no1/U239/CO (FA1EHD)               0.21       3.71 f
+  radix_no1/U146/CO (FA1EHD)               0.21       3.92 f
+  radix_no1/U675/CO (FA1EHD)               0.21       4.13 f
+  radix_no1/U1380/CO (FA1EHD)              0.18       4.31 f
+  radix_no1/U1378/CO (FA1EHD)              0.21       4.52 f
+  radix_no1/U1368/CO (FA1EHD)              0.21       4.73 f
+  radix_no1/U1374/CO (FA1EHD)              0.21       4.94 f
+  radix_no1/U1373/CO (FA1EHD)              0.21       5.15 f
+  radix_no1/U633/CO (FA1EHD)               0.21       5.35 f
+  radix_no1/U1372/CO (FA1EHD)              0.21       5.56 f
+  radix_no1/U1371/CO (FA1EHD)              0.21       5.77 f
+  radix_no1/U1370/CO (FA1EHD)              0.21       5.98 f
+  radix_no1/U1369/CO (FA1EHD)              0.21       6.19 f
+  radix_no1/U720/S (FA1EHD)                0.29       6.48 f
+  radix_no1/U566/O (AO22CHD)               0.22       6.70 f
+  radix_no1/op_r[17] (radix2_4)            0.00       6.70 f
+  radix_no2/din_b_r[17] (radix2_3)         0.00       6.70 f
+  radix_no2/U1148/O (NR2CHD)               0.16       6.86 r
+  radix_no2/U1238/O (INVDHD)               0.06       6.92 f
+  radix_no2/U1237/O (ND2DHD)               0.07       6.99 r
+  radix_no2/U21/O (XOR2EHD)                0.17       7.16 f
+  radix_no2/U758/O (AO22EHD)               0.20       7.36 f
+  radix_no2/op_r[17] (radix2_3)            0.00       7.36 f
+  radix_no3/din_b_r[17] (radix2_2)         0.00       7.36 f
+  radix_no3/U1207/O (OR2EHD)               0.15       7.50 f
+  radix_no3/U1057/O (ND2DHD)               0.07       7.57 r
+  radix_no3/U1013/O (XNR2CHD)              0.18       7.75 f
+  radix_no3/U1126/O (AO22EHD)              0.24       7.99 f
+  radix_no3/op_r[17] (radix2_2)            0.00       7.99 f
+  radix_no4/din_b_r[17] (radix2_1)         0.00       7.99 f
+  radix_no4/U235/O (ND2DHD)                0.10       8.09 r
+  radix_no4/U205/O (INVDHD)                0.05       8.14 f
+  radix_no4/U96/O (AOI12HHD)               0.20       8.34 r
+  radix_no4/U389/O (OAI12CHD)              0.08       8.42 f
+  radix_no4/U95/O (AOI12CHD)               0.18       8.59 r
+  radix_no4/U390/O (OAI12CHD)              0.13       8.72 f
+  radix_no4/U152/O (AOI12CHD)              0.20       8.92 r
+  radix_no4/U391/O (OAI12CHD)              0.10       9.02 f
+  radix_no4/U237/O (XOR2EHD)               0.22       9.24 r
+  radix_no4/U413/O (MOAI1KHD)              0.15       9.39 f
+  radix_no4/op_r[23] (radix2_1)            0.00       9.39 f
+  radix_no5/din_b_r[23] (radix2_0)         0.00       9.39 f
+  radix_no5/U40/O (OR2HHD)                 0.12       9.50 f
+  radix_no5/U357/O (ND2HHD)                0.05       9.55 r
+  radix_no5/U110/O (XNR2CHD)               0.16       9.71 f
+  radix_no5/U358/O (AO22EHD)               0.17       9.88 f
+  radix_no5/op_r[23] (radix2_0)            0.00       9.88 f
+  U4090/O (ND2KHD)                         0.19      10.07 r
+  U4091/O (OAI22CHD)                       0.11      10.18 f
+  clk_r_REG51_S14/D (QDFFRBCHD)            0.00      10.18 f
+  data arrival time                                  10.18
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  clk_r_REG51_S14/CK (QDFFRBCHD)           0.00      10.40 r
+  library setup time                      -0.22      10.18
+  data required time                                 10.18
+  -----------------------------------------------------------
+  data required time                                 10.18
+  data arrival time                                 -10.18
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: radix_no2/clk_r_REG1564_S18
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: radix_no5/clk_r_REG222_S13
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+  radix2_3           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_2           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_1           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+  radix2_0           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  radix_no2/clk_r_REG1564_S18/CK (DFERBCHD)               0.00 #     0.50 r
+  radix_no2/clk_r_REG1564_S18/Q (DFERBCHD)                0.60       1.10 r
+  radix_no2/U452/O (NR2EHD)                               0.15       1.26 f
+  radix_no2/U1460/O (INVCHD)                              0.09       1.35 r
+  radix_no2/U1461/O (ND2CHD)                              0.08       1.43 f
+  radix_no2/U1463/O (XNR2HHD)                             0.34       1.77 f
+  radix_no2/U1465/O (OR2CHD)                              0.18       1.95 f
+  radix_no2/U1468/O (AOI12CHD)                            0.20       2.15 r
+  radix_no2/U1471/O (OAI12CHD)                            0.13       2.28 f
+  radix_no2/U1633/O (INVCHD)                              0.13       2.41 r
+  radix_no2/U1203/O (XNR2CHD)                             0.24       2.65 f
+  radix_no2/U1687/O (OAI12CHD)                            0.13       2.78 r
+  radix_no2/U1200/O (XOR2EHD)                             0.21       2.99 f
+  radix_no2/U1165/O (ND2CHD)                              0.12       3.11 r
+  radix_no2/U1689/O (OAI12CHD)                            0.13       3.23 f
+  radix_no2/U1050/O (INVCHD)                              0.12       3.36 r
+  radix_no2/U2134/O (XOR2CHD)                             0.28       3.63 f
+  radix_no2/U1350/O (OR2CHD)                              0.15       3.78 f
+  radix_no2/U2173/O (AOI12CHD)                            0.13       3.91 r
+  radix_no2/U2175/O (OAI12CHD)                            0.12       4.03 f
+  radix_no2/U1317/O (XNR2HHD)                             0.23       4.26 f
+  radix_no2/U451/O (AO22EHD)                              0.17       4.43 f
+  radix_no2/op_i[0] (radix2_3)                            0.00       4.43 f
+  radix_no3/din_b_i[0] (radix2_2)                         0.00       4.43 f
+  radix_no3/U1036/O (INVCKHHD)                            0.06       4.49 r
+  radix_no3/U1031/O (XNR2KHD)                             0.16       4.65 f
+  radix_no3/U468/O (AO22CHD)                              0.20       4.85 f
+  radix_no3/op_i[0] (radix2_2)                            0.00       4.85 f
+  radix_no4/din_b_i[0] (radix2_1)                         0.00       4.85 f
+  radix_no4/U501/O (INVCHD)                               0.11       4.96 r
+  radix_no4/U300/O (XNR2CHD)                              0.18       5.14 r
+  radix_no4/U109/O (AO22CHD)                              0.19       5.33 r
+  radix_no4/op_i[0] (radix2_1)                            0.00       5.33 r
+  radix_no5/din_b_i[0] (radix2_0)                         0.00       5.33 r
+  radix_no5/U113/O (INVDHD)                               0.07       5.40 f
+  radix_no5/U130/O (OR2CHD)                               0.16       5.57 f
+  radix_no5/U232/CO (FA1DHD)                              0.28       5.84 f
+  radix_no5/U448/CO (FA1EHD)                              0.22       6.06 f
+  radix_no5/U230/CO (FA1DHD)                              0.27       6.34 f
+  radix_no5/U455/CO (FA1EHD)                              0.21       6.55 f
+  radix_no5/U125/CO (FA1EHD)                              0.18       6.73 f
+  radix_no5/U124/CO (FA1EHD)                              0.21       6.94 f
+  radix_no5/U465/CO (FA1EHD)                              0.21       7.14 f
+  radix_no5/U469/CO (FA1EHD)                              0.21       7.35 f
+  radix_no5/U473/CO (FA1EHD)                              0.21       7.56 f
+  radix_no5/U477/CO (FA1EHD)                              0.21       7.76 f
+  radix_no5/U481/CO (FA1EHD)                              0.18       7.94 f
+  radix_no5/U485/CO (FA1EHD)                              0.21       8.15 f
+  radix_no5/U489/CO (FA1EHD)                              0.21       8.36 f
+  radix_no5/U493/CO (FA1EHD)                              0.21       8.57 f
+  radix_no5/U497/CO (FA1EHD)                              0.21       8.77 f
+  radix_no5/U501/CO (FA1EHD)                              0.20       8.97 f
+  radix_no5/U120/O (AOI12EHD)                             0.21       9.18 r
+  radix_no5/U376/O (OAI12CHD)                             0.10       9.28 f
+  radix_no5/U173/O (AOI12CHD)                             0.17       9.45 r
+  radix_no5/U378/O (OAI12CHD)                             0.12       9.57 f
+  radix_no5/U379/O (AOI12CHD)                             0.19       9.76 r
+  radix_no5/U275/O (XOR2EHD)                              0.23       9.99 f
+  radix_no5/U274/O (MUX2CHD)                              0.15      10.14 f
+  radix_no5/delay_i[22] (radix2_0)                        0.00      10.14 f
+  radix_no5/din_a_i[22] (radix2_0)                        0.00      10.14 f
+  radix_no5/clk_r_REG222_S13/D (DFERBCHD)                 0.00      10.14 f
+  data arrival time                                                 10.14
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  radix_no5/clk_r_REG222_S13/CK (DFERBCHD)                0.00      10.40 r
+  library setup time                                     -0.26      10.14
+  data required time                                                10.14
+  --------------------------------------------------------------------------
+  data required time                                                10.14
+  data arrival time                                                -10.14
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: clk_r_REG2299_S2
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: clk_r_REG193_S14
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+  radix2_4           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_3           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_2           enG10K                fsc0h_d_generic_core_ss1p08v125c
+  radix2_1           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+  radix2_0           enG5K                 fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG2299_S2/CK (QDFFRBCHD)          0.00 #     0.50 r
+  clk_r_REG2299_S2/Q (QDFFRBCHD)           0.34       0.84 r
+  U6920/O (INVDHD)                         0.09       0.93 f
+  U3471/O (ND2HHD)                         0.16       1.08 r
+  U3323/O (INVCKMHD)                       0.13       1.21 f
+  U4350/O (OA13HHD)                        0.16       1.37 f
+  U3680/O (AO12EHD)                        0.20       1.57 f
+  radix_no1/w_i[2] (radix2_4)              0.00       1.57 f
+  radix_no1/U680/O (BUFMHD)                0.13       1.71 f
+  radix_no1/U657/O (XOR2KHD)               0.20       1.91 r
+  radix_no1/U983/O (AN3EHD)                0.49       2.39 r
+  radix_no1/U591/O (AOI222BHD)             0.15       2.54 f
+  radix_no1/U696/O (OAI12CHD)              0.14       2.68 r
+  radix_no1/U697/O (XOR2CHD)               0.21       2.89 f
+  radix_no1/U863/C (HA1EHD)                0.12       3.01 f
+  radix_no1/U253/CO (FA1EHD)               0.19       3.20 f
+  radix_no1/U563/CO (FA1EHD)               0.20       3.40 f
+  radix_no1/U309/CO (FA1EHD)               0.20       3.60 f
+  radix_no1/U376/CO (FA1EHD)               0.20       3.80 f
+  radix_no1/U989/CO (FA1EHD)               0.20       4.00 f
+  radix_no1/U988/CO (FA1EHD)               0.20       4.20 f
+  radix_no1/U987/CO (FA1EHD)               0.20       4.39 f
+  radix_no1/U986/CO (FA1EHD)               0.20       4.59 f
+  radix_no1/U985/CO (FA1EHD)               0.20       4.79 f
+  radix_no1/U984/CO (FA1EHD)               0.21       5.00 f
+  radix_no1/U597/O (ND2DHD)                0.09       5.09 r
+  radix_no1/U599/O (ND3EHD)                0.11       5.20 f
+  radix_no1/U647/O (ND2HHD)                0.08       5.28 r
+  radix_no1/U648/O (ND3EHD)                0.07       5.35 f
+  radix_no1/U980/CO (FA1EHD)               0.20       5.55 f
+  radix_no1/U1013/CO (FA1EHD)              0.20       5.75 f
+  radix_no1/U1103/CO (FA1EHD)              0.20       5.95 f
+  radix_no1/U1106/CO (FA1EHD)              0.20       6.15 f
+  radix_no1/U1101/CO (FA1EHD)              0.20       6.35 f
+  radix_no1/U95/CO (FA1EHD)                0.20       6.54 f
+  radix_no1/U1098/CO (FA1EHD)              0.21       6.75 f
+  radix_no1/U1097/S (FA1DHD)               0.38       7.13 r
+  radix_no1/U1110/O (ND2DHD)               0.09       7.22 f
+  radix_no1/U133/O (ND2DHD)                0.09       7.31 r
+  radix_no1/U1125/O (XOR2HHD)              0.18       7.49 f
+  radix_no1/U234/O (AO12HHD)               0.16       7.65 f
+  radix_no1/op_i[22] (radix2_4)            0.00       7.65 f
+  radix_no2/din_b_i[22] (radix2_3)         0.00       7.65 f
+  radix_no2/U447/O (ND2DHD)                0.11       7.76 r
+  radix_no2/U2805/O (ND2HHD)               0.06       7.82 f
+  radix_no2/U1208/O (XNR2CHD)              0.16       7.99 f
+  radix_no2/U1207/O (AO22HHD)              0.24       8.23 f
+  radix_no2/op_i[22] (radix2_3)            0.00       8.23 f
+  radix_no3/din_b_i[22] (radix2_2)         0.00       8.23 f
+  radix_no3/U11/O (ND2CHD)                 0.12       8.35 r
+  radix_no3/U1130/O (ND2DHD)               0.10       8.44 f
+  radix_no3/U189/O (XOR2EHD)               0.19       8.64 r
+  radix_no3/U1257/O (ND2HHD)               0.06       8.70 f
+  radix_no3/U458/O (ND2KHD)                0.10       8.80 r
+  radix_no3/op_i[22] (radix2_2)            0.00       8.80 r
+  radix_no4/din_b_i[22] (radix2_1)         0.00       8.80 r
+  radix_no4/U89/O (NR2EHD)                 0.07       8.86 f
+  radix_no4/U473/O (OAI12CHD)              0.12       8.99 r
+  radix_no4/U88/O (XNR2CHD)                0.23       9.22 f
+  radix_no4/U87/O (AO22HHD)                0.21       9.42 f
+  radix_no4/op_i[23] (radix2_1)            0.00       9.42 f
+  radix_no5/din_b_i[23] (radix2_0)         0.00       9.42 f
+  radix_no5/U71/O (NR2GHD)                 0.07       9.49 r
+  radix_no5/U359/O (INVGHD)                0.03       9.52 f
+  radix_no5/U360/O (ND2HHD)                0.05       9.57 r
+  radix_no5/U419/O (XOR2HHD)               0.13       9.70 r
+  radix_no5/U123/O (AO22HHD)               0.11       9.81 r
+  radix_no5/op_i[23] (radix2_0)            0.00       9.81 r
+  U4123/O (ND2KHD)                         0.19      10.00 f
+  U5481/O (OA22CHD)                        0.23      10.23 f
+  clk_r_REG193_S14/D (QDFFSBHHD)           0.00      10.23 f
+  data arrival time                                  10.23
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  clk_r_REG193_S14/CK (QDFFSBHHD)          0.00      10.40 r
+  library setup time                      -0.16      10.24
+  data required time                                 10.24
+  -----------------------------------------------------------
+  data required time                                 10.24
+  data arrival time                                 -10.23
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: din_i[0] (input port clocked by clk)
+  Endpoint: radix_no1/clk_r_REG2333_S1
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    5.00       5.50 f
+  din_i[0] (in)                                           0.00       5.50 f
+  radix_no1/din_b_i[8] (radix2_4)                         0.00       5.50 f
+  radix_no1/clk_r_REG2333_S1/D (QDFFRSBEHD)               0.00       5.50 f
+  data arrival time                                                  5.50
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  radix_no1/clk_r_REG2333_S1/CK (QDFFRSBEHD)              0.00      10.40 r
+  library setup time                                     -0.21      10.19
+  data required time                                                10.19
+  --------------------------------------------------------------------------
+  data required time                                                10.19
+  data arrival time                                                 -5.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.68
+
+
+  Startpoint: in_valid (input port clocked by clk)
+  Endpoint: clk_r_REG0_S1
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  input external delay                     5.00       5.50 f
+  in_valid (in)                            0.00       5.50 f
+  clk_r_REG0_S1/D (QDFFRBCHD)              0.00       5.50 f
+  data arrival time                                   5.50
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  clk_r_REG0_S1/CK (QDFFRBCHD)             0.00      10.40 r
+  library setup time                      -0.15      10.25
+  data required time                                 10.25
+  -----------------------------------------------------------
+  data required time                                 10.25
+  data arrival time                                  -5.50
+  -----------------------------------------------------------
+  slack (MET)                                         4.75
+
+
+  Startpoint: din_r[11] (input port clocked by clk)
+  Endpoint: radix_no1/clk_r_REG2310_S1
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    5.00       5.50 f
+  din_r[11] (in)                                          0.00       5.50 f
+  radix_no1/din_b_r[22] (radix2_4)                        0.00       5.50 f
+  radix_no1/clk_r_REG2310_S1/D (QDFFRBCHD)                0.00       5.50 f
+  data arrival time                                                  5.50
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  radix_no1/clk_r_REG2310_S1/CK (QDFFRBCHD)               0.00      10.40 r
+  library setup time                                     -0.15      10.25
+  data required time                                                10.25
+  --------------------------------------------------------------------------
+  data required time                                                10.25
+  data arrival time                                                 -5.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.75
+
+
+  Startpoint: din_r[10] (input port clocked by clk)
+  Endpoint: radix_no1/clk_r_REG2311_S1
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    5.00       5.50 f
+  din_r[10] (in)                                          0.00       5.50 f
+  radix_no1/din_b_r[18] (radix2_4)                        0.00       5.50 f
+  radix_no1/clk_r_REG2311_S1/D (QDFFRBCHD)                0.00       5.50 f
+  data arrival time                                                  5.50
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  radix_no1/clk_r_REG2311_S1/CK (QDFFRBCHD)               0.00      10.40 r
+  library setup time                                     -0.15      10.25
+  data required time                                                10.25
+  --------------------------------------------------------------------------
+  data required time                                                10.25
+  data arrival time                                                 -5.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.75
+
+
+  Startpoint: din_r[9] (input port clocked by clk)
+  Endpoint: radix_no1/clk_r_REG2312_S1
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    5.00       5.50 f
+  din_r[9] (in)                                           0.00       5.50 f
+  radix_no1/din_b_r[17] (radix2_4)                        0.00       5.50 f
+  radix_no1/clk_r_REG2312_S1/D (QDFFRBCHD)                0.00       5.50 f
+  data arrival time                                                  5.50
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  radix_no1/clk_r_REG2312_S1/CK (QDFFRBCHD)               0.00      10.40 r
+  library setup time                                     -0.15      10.25
+  data required time                                                10.25
+  --------------------------------------------------------------------------
+  data required time                                                10.25
+  data arrival time                                                 -5.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.75
+
+
+  Startpoint: din_r[8] (input port clocked by clk)
+  Endpoint: radix_no1/clk_r_REG2313_S1
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    5.00       5.50 f
+  din_r[8] (in)                                           0.00       5.50 f
+  radix_no1/din_b_r[16] (radix2_4)                        0.00       5.50 f
+  radix_no1/clk_r_REG2313_S1/D (QDFFRBCHD)                0.00       5.50 f
+  data arrival time                                                  5.50
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  radix_no1/clk_r_REG2313_S1/CK (QDFFRBCHD)               0.00      10.40 r
+  library setup time                                     -0.15      10.25
+  data required time                                                10.25
+  --------------------------------------------------------------------------
+  data required time                                                10.25
+  data arrival time                                                 -5.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.75
+
+
+  Startpoint: din_r[7] (input port clocked by clk)
+  Endpoint: radix_no1/clk_r_REG2314_S1
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    5.00       5.50 f
+  din_r[7] (in)                                           0.00       5.50 f
+  radix_no1/din_b_r[15] (radix2_4)                        0.00       5.50 f
+  radix_no1/clk_r_REG2314_S1/D (QDFFRBCHD)                0.00       5.50 f
+  data arrival time                                                  5.50
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  radix_no1/clk_r_REG2314_S1/CK (QDFFRBCHD)               0.00      10.40 r
+  library setup time                                     -0.15      10.25
+  data required time                                                10.25
+  --------------------------------------------------------------------------
+  data required time                                                10.25
+  data arrival time                                                 -5.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.75
+
+
+  Startpoint: din_r[6] (input port clocked by clk)
+  Endpoint: radix_no1/clk_r_REG2315_S1
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    5.00       5.50 f
+  din_r[6] (in)                                           0.00       5.50 f
+  radix_no1/din_b_r[14] (radix2_4)                        0.00       5.50 f
+  radix_no1/clk_r_REG2315_S1/D (QDFFRBCHD)                0.00       5.50 f
+  data arrival time                                                  5.50
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  radix_no1/clk_r_REG2315_S1/CK (QDFFRBCHD)               0.00      10.40 r
+  library setup time                                     -0.15      10.25
+  data required time                                                10.25
+  --------------------------------------------------------------------------
+  data required time                                                10.25
+  data arrival time                                                 -5.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.75
+
+
+  Startpoint: din_r[5] (input port clocked by clk)
+  Endpoint: radix_no1/clk_r_REG2316_S1
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    5.00       5.50 f
+  din_r[5] (in)                                           0.00       5.50 f
+  radix_no1/din_b_r[13] (radix2_4)                        0.00       5.50 f
+  radix_no1/clk_r_REG2316_S1/D (QDFFRBCHD)                0.00       5.50 f
+  data arrival time                                                  5.50
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  radix_no1/clk_r_REG2316_S1/CK (QDFFRBCHD)               0.00      10.40 r
+  library setup time                                     -0.15      10.25
+  data required time                                                10.25
+  --------------------------------------------------------------------------
+  data required time                                                10.25
+  data arrival time                                                 -5.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.75
+
+
+  Startpoint: din_r[4] (input port clocked by clk)
+  Endpoint: radix_no1/clk_r_REG2317_S1
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    5.00       5.50 f
+  din_r[4] (in)                                           0.00       5.50 f
+  radix_no1/din_b_r[12] (radix2_4)                        0.00       5.50 f
+  radix_no1/clk_r_REG2317_S1/D (QDFFRBCHD)                0.00       5.50 f
+  data arrival time                                                  5.50
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.50      10.50
+  clock uncertainty                                      -0.10      10.40
+  radix_no1/clk_r_REG2317_S1/CK (QDFFRBCHD)               0.00      10.40 r
+  library setup time                                     -0.15      10.25
+  data required time                                                10.25
+  --------------------------------------------------------------------------
+  data required time                                                10.25
+  data arrival time                                                 -5.50
+  --------------------------------------------------------------------------
+  slack (MET)                                                        4.75
+
+
+  Startpoint: clk_r_REG475_S19
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_i[9] (output port clocked by clk)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG475_S19/CK (DFERBCHD)           0.00 #     0.50 r
+  clk_r_REG475_S19/QB (DFERBCHD)           0.42       0.92 r
+  U4360/O (INVCKKHD)                       1.21       2.13 f
+  dout_i[9] (out)                          0.00       2.13 f
+  data arrival time                                   2.13
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  output external delay                   -5.00       5.40
+  data required time                                  5.40
+  -----------------------------------------------------------
+  data required time                                  5.40
+  data arrival time                                  -2.13
+  -----------------------------------------------------------
+  slack (MET)                                         3.27
+
+
+  Startpoint: clk_r_REG545_S19
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_i[8] (output port clocked by clk)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG545_S19/CK (DFERBCHD)           0.00 #     0.50 r
+  clk_r_REG545_S19/QB (DFERBCHD)           0.42       0.92 r
+  U4359/O (INVCKKHD)                       1.21       2.13 f
+  dout_i[8] (out)                          0.00       2.13 f
+  data arrival time                                   2.13
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  output external delay                   -5.00       5.40
+  data required time                                  5.40
+  -----------------------------------------------------------
+  data required time                                  5.40
+  data arrival time                                  -2.13
+  -----------------------------------------------------------
+  slack (MET)                                         3.27
+
+
+  Startpoint: clk_r_REG615_S19
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_i[7] (output port clocked by clk)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG615_S19/CK (DFERBCHD)           0.00 #     0.50 r
+  clk_r_REG615_S19/QB (DFERBCHD)           0.42       0.92 r
+  U4358/O (INVCKKHD)                       1.21       2.13 f
+  dout_i[7] (out)                          0.00       2.13 f
+  data arrival time                                   2.13
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  output external delay                   -5.00       5.40
+  data required time                                  5.40
+  -----------------------------------------------------------
+  data required time                                  5.40
+  data arrival time                                  -2.13
+  -----------------------------------------------------------
+  slack (MET)                                         3.27
+
+
+  Startpoint: clk_r_REG685_S19
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_i[6] (output port clocked by clk)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG685_S19/CK (DFERBCHD)           0.00 #     0.50 r
+  clk_r_REG685_S19/QB (DFERBCHD)           0.42       0.92 r
+  U4357/O (INVCKKHD)                       1.21       2.13 f
+  dout_i[6] (out)                          0.00       2.13 f
+  data arrival time                                   2.13
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  output external delay                   -5.00       5.40
+  data required time                                  5.40
+  -----------------------------------------------------------
+  data required time                                  5.40
+  data arrival time                                  -2.13
+  -----------------------------------------------------------
+  slack (MET)                                         3.27
+
+
+  Startpoint: clk_r_REG754_S19
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_i[5] (output port clocked by clk)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG754_S19/CK (DFERBCHD)           0.00 #     0.50 r
+  clk_r_REG754_S19/QB (DFERBCHD)           0.42       0.92 r
+  U4356/O (INVCKKHD)                       1.21       2.13 f
+  dout_i[5] (out)                          0.00       2.13 f
+  data arrival time                                   2.13
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  output external delay                   -5.00       5.40
+  data required time                                  5.40
+  -----------------------------------------------------------
+  data required time                                  5.40
+  data arrival time                                  -2.13
+  -----------------------------------------------------------
+  slack (MET)                                         3.27
+
+
+  Startpoint: clk_r_REG824_S19
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_i[4] (output port clocked by clk)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG824_S19/CK (DFERBCHD)           0.00 #     0.50 r
+  clk_r_REG824_S19/QB (DFERBCHD)           0.42       0.92 r
+  U4355/O (INVCKKHD)                       1.21       2.13 f
+  dout_i[4] (out)                          0.00       2.13 f
+  data arrival time                                   2.13
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  output external delay                   -5.00       5.40
+  data required time                                  5.40
+  -----------------------------------------------------------
+  data required time                                  5.40
+  data arrival time                                  -2.13
+  -----------------------------------------------------------
+  slack (MET)                                         3.27
+
+
+  Startpoint: clk_r_REG894_S19
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_i[3] (output port clocked by clk)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG894_S19/CK (DFERBCHD)           0.00 #     0.50 r
+  clk_r_REG894_S19/QB (DFERBCHD)           0.42       0.92 r
+  U4354/O (INVCKKHD)                       1.21       2.13 f
+  dout_i[3] (out)                          0.00       2.13 f
+  data arrival time                                   2.13
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  output external delay                   -5.00       5.40
+  data required time                                  5.40
+  -----------------------------------------------------------
+  data required time                                  5.40
+  data arrival time                                  -2.13
+  -----------------------------------------------------------
+  slack (MET)                                         3.27
+
+
+  Startpoint: clk_r_REG964_S19
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_i[2] (output port clocked by clk)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG964_S19/CK (DFERBCHD)           0.00 #     0.50 r
+  clk_r_REG964_S19/QB (DFERBCHD)           0.42       0.92 r
+  U4339/O (INVCKKHD)                       1.21       2.13 f
+  dout_i[2] (out)                          0.00       2.13 f
+  data arrival time                                   2.13
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  output external delay                   -5.00       5.40
+  data required time                                  5.40
+  -----------------------------------------------------------
+  data required time                                  5.40
+  data arrival time                                  -2.13
+  -----------------------------------------------------------
+  slack (MET)                                         3.27
+
+
+  Startpoint: clk_r_REG1087_S19
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_i[1] (output port clocked by clk)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG1087_S19/CK (DFERBCHD)          0.00 #     0.50 r
+  clk_r_REG1087_S19/QB (DFERBCHD)          0.42       0.92 r
+  U4353/O (INVCKKHD)                       1.21       2.13 f
+  dout_i[1] (out)                          0.00       2.13 f
+  data arrival time                                   2.13
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  output external delay                   -5.00       5.40
+  data required time                                  5.40
+  -----------------------------------------------------------
+  data required time                                  5.40
+  data arrival time                                  -2.13
+  -----------------------------------------------------------
+  slack (MET)                                         3.27
+
+
+  Startpoint: clk_r_REG1162_S19
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: dout_i[0] (output port clocked by clk)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FFT                G5K                   fsc0h_d_generic_core_ss1p08v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clk_r_REG1162_S19/CK (DFERBCHD)          0.00 #     0.50 r
+  clk_r_REG1162_S19/QB (DFERBCHD)          0.42       0.92 r
+  U4352/O (INVCKKHD)                       1.21       2.13 f
+  dout_i[0] (out)                          0.00       2.13 f
+  data arrival time                                   2.13
+
+  clock clk (rise edge)                   10.00      10.00
+  clock network delay (ideal)              0.50      10.50
+  clock uncertainty                       -0.10      10.40
+  output external delay                   -5.00       5.40
+  data required time                                  5.40
+  -----------------------------------------------------------
+  data required time                                  5.40
+  data arrival time                                  -2.13
+  -----------------------------------------------------------
+  slack (MET)                                         3.27
+
+
+1

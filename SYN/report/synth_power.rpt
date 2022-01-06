@@ -1,0 +1,58 @@
+****************************************
+Report : power
+        -analysis_effort low
+Design : FFT
+Version: K-2015.06
+Date   : Sat Jan  1 11:41:59 2022
+****************************************
+
+
+Library(s) Used:
+
+    fsc0h_d_generic_core_ss1p08v125c (File: /home/IC/Desktop/Abdelazeem/Technology_Library/UMC130nm/lib/StdCell/fsc0h_d_generic_core_ss1p08v125c.db)
+
+
+Operating Conditions: WCCOM   Library: fsc0h_d_generic_core_ss1p08v125c
+Wire Load Model Mode: enclosed
+
+Design        Wire Load Model            Library
+------------------------------------------------
+FFT                    G5K               fsc0h_d_generic_core_ss1p08v125c
+radix2_4               enG10K            fsc0h_d_generic_core_ss1p08v125c
+shift_16               enG5K             fsc0h_d_generic_core_ss1p08v125c
+radix2_3               enG10K            fsc0h_d_generic_core_ss1p08v125c
+radix2_2               enG10K            fsc0h_d_generic_core_ss1p08v125c
+radix2_1               enG5K             fsc0h_d_generic_core_ss1p08v125c
+radix2_0               enG5K             fsc0h_d_generic_core_ss1p08v125c
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =   2.6986 mW   (96%)
+  Net Switching Power  = 126.3021 uW    (4%)
+                         ---------
+Total Dynamic Power    =   2.8249 mW  (100%)
+
+Cell Leakage Power     = 127.0537 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           2.6494        1.6785e-02        4.4112e+07            2.7102  (  91.81%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  4.9205e-02            0.1095        8.2942e+07            0.2417  (   8.19%)
+--------------------------------------------------------------------------------------------------
+Total              2.6986 mW         0.1263 mW     1.2705e+08 pW         2.9519 mW
+

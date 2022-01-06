@@ -1,0 +1,54 @@
+ 
+****************************************
+Report : resources
+Design : FFT
+Version: K-2015.06
+Date   : Sat Jan  1 11:36:54 2022
+****************************************
+
+
+Resource Sharing Report for design FFT in file ../rtl/FFT.v
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r127     | DW01_cmp2    | width=6    |               | gt_47                |
+| r129     | DW01_sub     | width=5    |               | sub_47_aco           |
+| r131     | DW01_inc     | width=6    |               | add_251_S2           |
+| rom16/r66               |            |               |                      |
+|          | DW01_inc     | width=6    |               | rom16/add_13_S2      |
+| rom16/r68               |            |               |                      |
+|          | DW01_cmp2    | width=6    |               | rom16/lt_20          |
+| shift_8/r61             |            |               |                      |
+|          | DW01_add     | width=192  |               | shift_8/add_38       |
+|          |              |            |               | shift_8/add_43       |
+| shift_8/r62             |            |               |                      |
+|          | DW01_add     | width=192  |               | shift_8/add_39       |
+|          |              |            |               | shift_8/add_44       |
+| rom8/r64 | DW01_inc     | width=4    |               | rom8/add_29          |
+|          |              |            |               | rom8/add_33          |
+| rom8/r67 | DW01_inc     | width=6    |               | rom8/add_17          |
+| shift_4/r61             |            |               |                      |
+|          | DW01_add     | width=96   |               | shift_4/add_38       |
+|          |              |            |               | shift_4/add_43       |
+| shift_4/r62             |            |               |                      |
+|          | DW01_add     | width=96   |               | shift_4/add_39       |
+|          |              |            |               | shift_4/add_44       |
+| rom4/r64 | DW01_inc     | width=3    |               | rom4/add_29          |
+|          |              |            |               | rom4/add_33          |
+| rom4/r67 | DW01_inc     | width=6    |               | rom4/add_17          |
+| shift_2/r60             |            |               |                      |
+|          | DW01_add     | width=48   |               | shift_2/add_38       |
+|          |              |            |               | shift_2/add_43       |
+| shift_2/r61             |            |               |                      |
+|          | DW01_add     | width=48   |               | shift_2/add_39       |
+|          |              |            |               | shift_2/add_44       |
+| rom2/r60 | DW01_inc     | width=2    |               | rom2/add_30          |
+|          |              |            |               | rom2/add_33          |
+| rom2/r63 | DW01_inc     | width=6    |               | rom2/add_18          |
+===============================================================================
+
+
+No implementations to report
+1
