@@ -1,3 +1,16 @@
+# --------------------------------------------------------------------
+# >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<
+# --------------------------------------------------------------------
+# Author: Ahmed Abdelazeem
+# Github: https://github.com/abdelazeem201
+# Email: ahmed_abdelazeem@outlook.com
+# Description: twiddle_gen.py
+# Dependencies: 
+# Since: 2021-12-2 10:10:59
+# LastEditors: ahmed abdelazeem
+# LastEditTime: 2021-12-2 10:10:59
+# ********************************************************************
+# Module Function
 def twos_comp(val, bits):
     """compute the 2's complement of int value val"""
     if (val & (1 << (bits - 1))) != 0: # if sign bit is set e.g., 8bit: 128-255
