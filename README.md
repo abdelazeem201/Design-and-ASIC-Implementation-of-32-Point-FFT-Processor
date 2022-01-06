@@ -12,7 +12,7 @@ I have succeeded synthesis the design and met  my constraints.
 |----------- | ------------- |
 |Cycle time  | (10) ns       |
 |Total area  | 202213.12 µm^2|
-|Power       | 2.9519 mW     |
+|Power       | 9.9519 mW     |
 |Techonlogy  | UMC 130nm     | 
 
 <img src= "https://github.com/abdelazeem201/Design-and-ASICImplementation-of-32-Point-FFT-Processor/blob/main/Pics/FFT.png">
@@ -37,5 +37,10 @@ The ROM is where the twiddle factors are stored. When it receives the valid sign
 *5- SORT MODULE* 
 Since we know the output signal order, we can simply control the order by directing the signal to a 2D array and place the value in the right place. For instance, the 2nd output is X[15], we can store it into result[15]. It will take 32 cycles to sort. To add on, the input of sort module is the most significant 16 bits of the output of the last radix-2 butterfly.
 
+## *PnR:*
 
-   
+I have succeeded to meet my time constraints, and all the test-bench data passed, meaning that our functionality of layout works fine.
+
+<img src= "https://github.com/abdelazeem201/Design-and-ASICImplementation-of-32-Point-FFT-Processor/blob/main/Pics/GDS.png">
+  
+ The CMOS 0.13 μm is used to design Application Specific Integrated Circuit (ASIC) for the proposed FFT processor and it works with an input size of 32 bits at the operating frequency of 100 MHz, occupies an area of 1.27 mm and consumes 28 mW, at an operating voltage of 1.2V.Obtained results are compared with existing methods in terms of input word length, throughput, power dissipation and it shows that the proposed architecture gives high throughput, uses 3x more word length and 2x less power dissipation.
