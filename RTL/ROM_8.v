@@ -1,3 +1,15 @@
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------
+// Author: Ahmed Abdelazeem
+// Github: https://github.com/abdelazeem201
+// Email: ahmed_abdelazeem@outlook.com
+// Description: ROM_8 module
+// Dependencies: 
+// Since: 2021-12-20 17:17:12
+// LastEditors: ahmed abdelazeem
+// ********************************************************************
+// Module Function
 module ROM_8(
 		input wire clk,
 		input wire in_valid,
