@@ -1,3 +1,16 @@
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------
+// Author: Ahmed Abdelazeem
+// Github: https://github.com/abdelazeem201
+// Email: ahmed_abdelazeem@outlook.com
+// Description: radix2 module
+// Dependencies: 
+// Since: 2021-12-24 05:10:50
+// LastEditors: ahmed abdelazeem
+// LastEditTime: 2021-17-18 05:10:50
+// ********************************************************************
+// Module Function
 module radix2(
 		input wire [1:0] state,
 		input wire signed [23:0] din_a_r,
