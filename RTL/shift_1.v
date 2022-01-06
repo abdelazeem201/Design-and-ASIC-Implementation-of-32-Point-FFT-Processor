@@ -1,3 +1,16 @@
+// --------------------------------------------------------------------
+// >>>>>>>>>>>>>>>>>>>>>>>>> COPYRIGHT NOTICE <<<<<<<<<<<<<<<<<<<<<<<<<
+// --------------------------------------------------------------------
+// Author: Ahmed Abdelazeem
+// Github: https://github.com/abdelazeem201
+// Email: ahmed_abdelazeem@outlook.com
+// Description: shift_1 module
+// Dependencies: 
+// Since: 2021-12-22 10:12:13
+// LastEditors: ahmed abdelazeem
+// LastEditTime: 2021-17-18 10:12:53
+// ********************************************************************
+// Module Function
 module shift_1(
 		input wire clk,
 		input wire reset,
