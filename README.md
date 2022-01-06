@@ -12,7 +12,30 @@ I have succeeded synthesis the design and met  my constraints.
 |----------- | ------------- |
 |Cycle time  | (10) ns       |
 |Total area  | 202213.12 µm^2|
-|Power       | 2.9519 mW mW  |
+|Power       | 2.9519 mW     |
 |Techonlogy  | UMC 130nm     | 
 
 <img src= "https://github.com/abdelazeem201/Design-and-ASICImplementation-of-32-Point-FFT-Processor/blob/main/Pics/FFT.png">
+
+*1- Delay Block:* 
+
+The delay blocks are is simply a FIFO shift register. It will shift 24 bits every cycle. For delay 16, the shift register size is 16x24 = 384.
+
+<img src= "https://github.com/abdelazeem201/Design-and-ASICImplementation-of-32-Point-FFT-Processor/blob/main/Pics/shift.png">
+
+*2- RADIX-2 BUTTERFLY*  
+While entering the first radix-2 butterfly, din is extended to 24bits to match the twiddle factor. The radix-2 butterfly is the core processor of this circuit. It contains three states :  
+1. Waiting: In waiting state, we cannot do any calculation. For instance, we have to wait for x[16] in the first state to do x[0]+x[16], so x[0]~x[15] will be in waiting state.
+2. First Half: In the first half, the output will be the summation of two index, e.g. x[0]+x[16]. We will output x[0]-x[16] to delay module simultaneously.
+3. Second Half: In the last state, we multiply the delay signal, which is the signal we output to the delay module in the first half state, with our twiddle factor. Same as above, the input (din_a_r and din_b_r) will be output to the delay module. The complex number multiplication is transformed from 4 multiplication and 2 summation to 3 multiplication 5 summation.
+
+<img src="https://github.com/abdelazeem201/Design-and-ASICImplementation-of-32-Point-FFT-Processor/blob/main/Pics/radix.png">
+
+*4- ROM AND STATE CONTROL MODULE*  
+The ROM is where the twiddle factors are stored. When it receives the valid signal from the front stage, it sets a counter. Based on the counter, it will output a state control output signal to the radix2 butterfly module. For the second half state where multiplication takes place, it will provide the needed twiddle factor.  
+
+*5- SORT MODULE* 
+Since we know the output signal order, we can simply control the order by directing the signal to a 2D array and place the value in the right place. For instance, the 2nd output is X[15], we can store it into result[15]. It will take 32 cycles to sort. To add on, the input of sort module is the most significant 16 bits of the output of the last radix-2 butterfly.
+
+
+   
