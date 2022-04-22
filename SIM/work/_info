@@ -1,0 +1,288 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/QuastSim/ALU
+T_opt
+!s110 1650629278
+V963c__ZFobMm>cGdn4YEM2
+Z1 04 7 4 work FFT_TB fast 0
+=1-e454e809ede2-62629a9d-35a-1978
+o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;10.7c;67
+R0
+T_opt1
+!s110 1650629484
+VfzS[LG[adm@lY9K`0h]Ui2
+R1
+=1-e454e809ede2-62629b6c-1c3-4fc
+o-quiet -auto_acc_if_foreign -work work +acc
+R2
+n@_opt1
+R3
+R0
+vFFT
+Z4 !s110 1650670574
+!i10b 1
+!s100 Q^:^]HkL3j4_lVSg8_BNP3
+I_[JliJme6oMi7mXMHD3RY3
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 dC:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM
+Z7 w1562219235
+8C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/FFT.v
+FC:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/FFT.v
+L0 12
+Z8 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z9 !s108 1650670574.000000
+!s107 ROM_2.v|ROM_4.v|ROM_8.v|ROM_16.v|radix2.v|shift_1.v|shift_2.v|shift_4.v|shift_8.v|shift_16.v|C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/FFT.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/FFT.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@f@f@t
+vradix2
+R4
+!i10b 1
+!s100 a9`;E:VLb_UYniYA4TU5U2
+I@=NCZ]B2mz1m2NmS[hoNR1
+R5
+R6
+R7
+8C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/radix2.v
+FC:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/radix2.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/radix2.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/radix2.v|
+!i113 0
+R10
+R2
+vROM_16
+R4
+!i10b 1
+!s100 ]`m_ADJk:Zh:f0:EXQRlz3
+IGcl3G1CR1hm0CFzL1jT@_3
+R5
+R6
+R7
+8C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_16.v
+FC:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_16.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_16.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_16.v|
+!i113 0
+R10
+R2
+n@r@o@m_16
+vROM_2
+R4
+!i10b 1
+!s100 QQk^EQ[fL77HT>JgRKc0P1
+ImNnzNhDFT76E=`ZR5cX<J2
+R5
+R6
+R7
+8C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_2.v
+FC:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_2.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_2.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_2.v|
+!i113 0
+R10
+R2
+n@r@o@m_2
+vROM_4
+R4
+!i10b 1
+!s100 JM<0lo6Yf<Zff1O53JzkI1
+IOnz@K_1k?UJ1Zj[eX00mO2
+R5
+R6
+R7
+8C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_4.v
+FC:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_4.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_4.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_4.v|
+!i113 0
+R10
+R2
+n@r@o@m_4
+vROM_8
+R4
+!i10b 1
+!s100 HTYaJ3EPMYO<c[RT7ICNZ0
+Icb1PU1^bZBQGmUhMT8DIZ3
+R5
+R6
+R7
+8C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_8.v
+FC:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_8.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_8.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/ROM_8.v|
+!i113 0
+R10
+R2
+n@r@o@m_8
+vshift_1
+R4
+!i10b 1
+!s100 CK=Q2NYL4^1J3;QQ6PUlj0
+IRTaA[ajk86OzDa3IF=[^U0
+R5
+R6
+R7
+8C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_1.v
+FC:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_1.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_1.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_1.v|
+!i113 0
+R10
+R2
+vshift_16
+Z11 !s110 1650670575
+!i10b 1
+!s100 DH[;M4TDKc1Tc4F4dS]^l3
+I8BjJTDL]U9<4PWj?]YN?k0
+R5
+R6
+R7
+8C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_16.v
+FC:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_16.v
+L0 1
+R8
+r1
+!s85 0
+31
+Z12 !s108 1650670575.000000
+!s107 C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_16.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_16.v|
+!i113 0
+R10
+R2
+vshift_2
+R4
+!i10b 1
+!s100 eMCI3`[1_J:HCObAk8^5_3
+I^1GW@dmi<Ti4[J<9HT8FL3
+R5
+R6
+R7
+8C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_2.v
+FC:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_2.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_2.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_2.v|
+!i113 0
+R10
+R2
+vshift_4
+R4
+!i10b 1
+!s100 LLH2l54JXZ9MM16W;R_R;1
+IKdVlRPb`KObTYVi?=CIdn0
+R5
+R6
+R7
+8C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_4.v
+FC:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_4.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_4.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_4.v|
+!i113 0
+R10
+R2
+vshift_8
+R11
+!i10b 1
+!s100 E6lFM:a=XU3MJc0d3QV4N2
+I<8EI_k[;BJYTHeNlMEG771
+R5
+R6
+R7
+8C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_8.v
+FC:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_8.v
+L0 1
+R8
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_8.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/shift_8.v|
+!i113 0
+R10
+R2
+vFFT_TB
+R11
+!i10b 1
+!s100 D=]242?[h]@HHWlb1RaX72
+IWD:@=QGfM>gDZT_mXVfiQ1
+R5
+R6
+R7
+8C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/FFT_TB.v
+FC:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/FFT_TB.v
+L0 4
+R8
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/FFT_TB.v|
+!s90 -reportprogress|300|-work|work|-vopt|C:/Users/Abdelazeem/Downloads/Compressed/FFT_CHIP/SIM/FFT_TB.v|
+!i113 0
+R10
+R2
+n@t@e@s@t@b@e@d
