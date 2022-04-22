@@ -1,0 +1,143 @@
+C:/Users/Abdelazeem/Downloads/Compressed/Test/src/radix2.v {1 {vlog -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/radix2.v
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+Start time: 01:36:14 on Apr 23,2022
+vlog -reportprogress 300 -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/radix2.v 
+-- Compiling module radix2
+
+Top level modules:
+	radix2
+End time: 01:36:14 on Apr 23,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} C:/Users/Abdelazeem/Downloads/Compressed/Test/src/TESTBED.v {1 {vlog -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/TESTBED.v
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+Start time: 01:36:15 on Apr 23,2022
+vlog -reportprogress 300 -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/TESTBED.v 
+-- Compiling module TESTBED
+
+Top level modules:
+	TESTBED
+End time: 01:36:15 on Apr 23,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_16.v {1 {vlog -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_16.v
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+Start time: 01:36:15 on Apr 23,2022
+vlog -reportprogress 300 -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_16.v 
+-- Compiling module shift_16
+
+Top level modules:
+	shift_16
+End time: 01:36:15 on Apr 23,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_8.v {1 {vlog -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_8.v
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+Start time: 01:36:15 on Apr 23,2022
+vlog -reportprogress 300 -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_8.v 
+-- Compiling module shift_8
+
+Top level modules:
+	shift_8
+End time: 01:36:15 on Apr 23,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} C:/Users/Abdelazeem/Downloads/Compressed/Test/src/ROM_2.v {1 {vlog -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/ROM_2.v
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+Start time: 01:36:14 on Apr 23,2022
+vlog -reportprogress 300 -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/ROM_2.v 
+-- Compiling module ROM_2
+
+Top level modules:
+	ROM_2
+End time: 01:36:14 on Apr 23,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} C:/Users/Abdelazeem/Downloads/Compressed/Test/src/FFT.v {1 {vlog -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/FFT.v
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+Start time: 01:36:14 on Apr 23,2022
+vlog -reportprogress 300 -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/FFT.v 
+-- Compiling module shift_16
+-- Compiling module shift_8
+-- Compiling module shift_4
+-- Compiling module shift_2
+-- Compiling module shift_1
+-- Compiling module radix2
+-- Compiling module ROM_16
+-- Compiling module ROM_8
+-- Compiling module ROM_4
+-- Compiling module ROM_2
+-- Compiling module FFT
+
+Top level modules:
+	FFT
+End time: 01:36:14 on Apr 23,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} C:/Users/Abdelazeem/Downloads/Compressed/Test/src/ROM_4.v {1 {vlog -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/ROM_4.v
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+Start time: 01:36:14 on Apr 23,2022
+vlog -reportprogress 300 -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/ROM_4.v 
+-- Compiling module ROM_4
+
+Top level modules:
+	ROM_4
+End time: 01:36:14 on Apr 23,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} C:/Users/Abdelazeem/Downloads/Compressed/Test/src/ROM_16.v {1 {vlog -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/ROM_16.v
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+Start time: 01:36:14 on Apr 23,2022
+vlog -reportprogress 300 -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/ROM_16.v 
+-- Compiling module ROM_16
+
+Top level modules:
+	ROM_16
+End time: 01:36:14 on Apr 23,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} C:/Users/Abdelazeem/Downloads/Compressed/Test/src/ROM_8.v {1 {vlog -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/ROM_8.v
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+Start time: 01:36:14 on Apr 23,2022
+vlog -reportprogress 300 -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/ROM_8.v 
+-- Compiling module ROM_8
+
+Top level modules:
+	ROM_8
+End time: 01:36:14 on Apr 23,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_1.v {1 {vlog -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_1.v
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+Start time: 01:36:14 on Apr 23,2022
+vlog -reportprogress 300 -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_1.v 
+-- Compiling module shift_1
+
+Top level modules:
+	shift_1
+End time: 01:36:14 on Apr 23,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_2.v {1 {vlog -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_2.v
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+Start time: 01:36:14 on Apr 23,2022
+vlog -reportprogress 300 -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_2.v 
+-- Compiling module shift_2
+
+Top level modules:
+	shift_2
+End time: 01:36:14 on Apr 23,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}} C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_4.v {1 {vlog -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_4.v
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+Start time: 01:36:14 on Apr 23,2022
+vlog -reportprogress 300 -work work -vopt C:/Users/Abdelazeem/Downloads/Compressed/Test/src/shift_4.v 
+-- Compiling module shift_4
+
+Top level modules:
+	shift_4
+End time: 01:36:14 on Apr 23,2022, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+
+} {} {}}
