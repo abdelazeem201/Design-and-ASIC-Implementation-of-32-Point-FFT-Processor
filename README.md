@@ -4,7 +4,7 @@ I present a novel pipelined fast Fourier transform (FFT) architecture which is c
 <img src= "https://github.com/abdelazeem201/Design-and-ASICImplementation-of-32-Point-FFT-Processor/blob/main/Pics/design.png">
 ## *Pre-Synthesis Simulation*
 using Questa Sim
-![image](https://user-images.githubusercontent.com/58098260/164835175-6918a140-ded7-438f-a69b-2b53cb5b509a.png)
+
 
 ## *Synthesize:*
 
