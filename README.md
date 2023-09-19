@@ -3,12 +3,11 @@ I present a novel pipelined fast Fourier transform (FFT) architecture which is c
 
 <img src= "https://github.com/abdelazeem201/Design-and-ASICImplementation-of-32-Point-FFT-Processor/blob/main/Pics/design.png">
 
-## *Pre-Synthesis Simulation*
+## *Pre-Synthesis Simulation using QuestaSim*
 
-using QuestaSim
 <img src= "https://github.com/abdelazeem201/Design-and-ASIC-Implementation-of-32-Point-FFT-Processor/blob/main/Pics/SIMULATION.png">
 
-## *Synthesize:*
+## *Synthesize using Design Compiler:*
 
 I have succeeded synthesis the design and met  my constraints.
 
@@ -42,7 +41,7 @@ The ROM is where the twiddle factors are stored. When it receives the valid sign
 *5- SORT MODULE* 
 Since we know the output signal order, we can simply control the order by directing the signal to a 2D array and place the value in the right place. For instance, the 2nd output is X[15], we can store it into result[15]. It will take 32 cycles to sort. To add on, the input of sort module is the most significant 16 bits of the output of the last radix-2 butterfly.
 
-## *PnR:*
+## *PnR using Innovus:*
 
 I have succeeded to meet my time constraints, and all the test-bench data passed, meaning that our functionality of layout works fine.
 
