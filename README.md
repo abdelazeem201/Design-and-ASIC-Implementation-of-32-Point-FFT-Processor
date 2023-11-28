@@ -3,6 +3,46 @@ I present a novel pipelined fast Fourier transform (FFT) architecture which is c
 
 <img src= "https://github.com/abdelazeem201/Design-and-ASICImplementation-of-32-Point-FFT-Processor/blob/main/Pics/design.png">
 
+## *Overview*
+This repository contains the design and implementation of a 32-point Fast Fourier Transform (FFT) processor utilizing a pipelined architecture based on the radix-2 Decimation-In-Frequency (DIF) algorithm.
+
+## *Introduction*
+
+Building a 32-point pipelined FFT processor involves breaking down the FFT computation into stages and implementing those stages in a pipelined manner to optimize throughput. This README provides an overview of the algorithm, architecture, and implementation steps for creating such a processor.
+
+## *Radix-2 DIF FFT*
+
+The radix-2 DIF FFT algorithm is a recursive process that divides the input data into smaller Discrete Fourier Transforms (DFTs) and combines them to form larger DFTs. For a 32-point FFT, the process involves sequential stages:
+
+__1. Stage 1:__ Divide the 32-point input into two sets of 16-point sequences.
+
+__2. Stage 2:__ Further divide each 16-point sequence into two 8-point sequences.
+
+__3. Stage 3:__ Divide each 8-point sequence into four 4-point sequences.
+
+__4. Stage 4:__ Continue this process down to two-point sequences and then single-point sequences.
+
+## *Pipelined Architecture*
+
+A pipelined architecture executes multiple operations simultaneously by breaking down the computation into stages. This significantly increases throughput but introduces a delay due to pipelining.
+
+- __Single-Path Delay:__ The processor operates on a single path for input data through the entire pipeline, simplifying complexity but requiring careful control signal handling and synchronization.
+
+## *Implementation Steps*
+Creating a 32-point pipelined FFT processor involves several essential steps:
+
+__1. Stage Decomposition:__ Break down the FFT computation into its individual stages following the radix-2 DIF algorithm.
+
+__2. Pipeline Register Insertion:__ Introduce pipeline registers between stages to enable concurrent operation.
+
+__3. Control Logic:__ Implement logic to manage data flow between pipeline stages and address potential hazards.
+
+__4. Arithmetic Units:__ Design efficient hardware for complex arithmetic operations (multiplication and addition) within each pipeline stage.
+
+__5. Memory and Buffering:__ Implement memory units and buffers for storing intermediate results.
+
+__6. Testing and Verification:__ Validate the functionality of the processor by testing it with various input patterns and verifying the output against expected results.
+
 ## *Pre-Synthesis Simulation using QuestaSim*
 
 <img src= "https://github.com/abdelazeem201/Design-and-ASIC-Implementation-of-32-Point-FFT-Processor/blob/main/Pics/SIMULATION.png">
@@ -48,3 +88,6 @@ I have succeeded to meet my time constraints, and all the test-bench data passed
 <img src= "https://github.com/abdelazeem201/Design-and-ASICImplementation-of-32-Point-FFT-Processor/blob/main/Pics/GDS.png">
   
  The CMOS 0.13 μm is used to design Application Specific Integrated Circuit (ASIC) for the proposed FFT processor and it works with an input size of 32 bits at the operating frequency of 100 MHz, occupies an area of 1.27 mm and consumes 28 mW, at an operating voltage of 1.2V.Obtained results are compared with existing methods in terms of input word length, throughput, power dissipation and it shows that the proposed architecture gives high throughput, uses 3x more word length and 2x less power dissipation.
+
+## *Conclusion*
+Building a 32-point pipelined FFT processor demands a profound understanding of FFT algorithms, hardware design, pipelining techniques, and control logic. The process typically involves using hardware description languages (VHDL or Verilog), simulation, synthesis, and implementation on suitable hardware (FPGAs or ASICs). Factors such as timing, power, and area constraints are crucial based on the target platform.
