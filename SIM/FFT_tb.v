@@ -43,24 +43,24 @@ initial begin
 		
 		case(i)
 		0: begin 
-			fp_r = $fopen("../Test_pattern/input/IN_real_pattern01.txt", "r");
-			fp_i = $fopen("../Test_pattern/input/IN_imag_pattern01.txt", "r");
+			fp_r = $fopen("./Test_cases/IN_real_pattern01.txt", "r");
+			fp_i = $fopen("./Test_cases/IN_imag_pattern01.txt", "r");
 		end
 		1: begin
-			fp_r = $fopen("../Test_pattern/input/IN_real_pattern02.txt", "r");
-			fp_i = $fopen("../Test_pattern/input/IN_imag_pattern02.txt", "r");
+			fp_r = $fopen("./Test_cases/IN_real_pattern02.txt", "r");
+			fp_i = $fopen("./Test_cases/IN_imag_pattern02.txt", "r");
 		end
                 2: begin
-                        fp_r = $fopen("../Test_pattern/input/IN_real_pattern03.txt", "r");
-                        fp_i = $fopen("../Test_pattern/input/IN_imag_pattern03.txt", "r");
+                        fp_r = $fopen("./Test_cases/IN_real_pattern03.txt", "r");
+                        fp_i = $fopen("./Test_cases/IN_imag_pattern03.txt", "r");
                 end
                 3: begin
-                        fp_r = $fopen("../Test_pattern/input/IN_real_pattern04.txt", "r");
-                        fp_i = $fopen("../Test_pattern/input/IN_imag_pattern04.txt", "r");
+                        fp_r = $fopen("./Test_cases/IN_real_pattern04.txt", "r");
+                        fp_i = $fopen("./Test_cases/IN_imag_pattern04.txt", "r");
                 end
                 4: begin
-                        fp_r = $fopen("../Test_pattern/input/IN_real_pattern05.txt", "r");
-                        fp_i = $fopen("../Test_pattern/input/IN_imag_pattern05.txt", "r");
+                        fp_r = $fopen("./Test_cases/IN_real_pattern05.txt", "r");
+                        fp_i = $fopen("./Test_cases/IN_imag_pattern05.txt", "r");
                 end
 		default: begin 
 			$display("Wrong dataset!? How could this happen?");
@@ -100,24 +100,24 @@ initial begin
 		// Read golden data
                 case(i)
                 0: begin
-                        fp_r = $fopen("../Test_pattern/output/OUT_real_16_pattern01.txt", "r");
-                        fp_i = $fopen("../Test_pattern/output/OUT_imag_16_pattern01.txt", "r");
+                        fp_r = $fopen("./Test_cases/OUT_real_16_pattern01.txt", "r");
+                        fp_i = $fopen("./Test_cases/OUT_imag_16_pattern01.txt", "r");
                 end
                 1: begin
-                        fp_r = $fopen("../Test_pattern/output/OUT_real_16_pattern02.txt", "r");
-                        fp_i = $fopen("../Test_pattern/output/OUT_imag_16_pattern02.txt", "r");
+                        fp_r = $fopen("./Test_cases/OUT_real_16_pattern02.txt", "r");
+                        fp_i = $fopen("./Test_cases/OUT_imag_16_pattern02.txt", "r");
                 end
                 2: begin
-                        fp_r = $fopen("../Test_pattern/output/OUT_real_16_pattern03.txt", "r");
-                        fp_i = $fopen("../Test_pattern/output/OUT_imag_16_pattern03.txt", "r");
+                        fp_r = $fopen("./Test_cases/OUT_real_16_pattern03.txt", "r");
+                        fp_i = $fopen("./Test_cases/OUT_imag_16_pattern03.txt", "r");
                 end
                 3: begin
-                        fp_r = $fopen("../Test_pattern/output/OUT_real_16_pattern04.txt", "r");
-                        fp_i = $fopen("../Test_pattern/output/OUT_imag_16_pattern04.txt", "r");
+                        fp_r = $fopen("./Test_cases/OUT_real_16_pattern04.txt", "r");
+                        fp_i = $fopen("./Test_cases/OUT_imag_16_pattern04.txt", "r");
                 end
                 4: begin
-                        fp_r = $fopen("../Test_pattern/output/OUT_real_16_pattern05.txt", "r");
-                        fp_i = $fopen("../Test_pattern/output/OUT_imag_16_pattern05.txt", "r");
+                        fp_r = $fopen("./Test_cases/OUT_real_16_pattern05.txt", "r");
+                        fp_i = $fopen("./Test_cases/OUT_imag_16_pattern05.txt", "r");
                 end
                 default: begin
                         $display("Wrong dataset!? No Way!");
@@ -190,4 +190,3 @@ FFT FFT_CORE(
 
 endmodule
 	
-
