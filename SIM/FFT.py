@@ -9,6 +9,17 @@
 # Since: 2021-12-2 5:16:50
 # LastEditors: ahmed abdelazeem
 # LastEditTime: 2021-12-2 5:16:50
+
+# Description
+# I've implemented a multi-stage computation using the radix-2 FFT (Fast Fourier Transform) algorithm. Each stage performs specific operations on the input data and generates output. The process is sequential and iterative, resulting in a final set of computed values.
+
+# Here's a general summary of what each stage appears to do:
+# 1. Stage 1: Computes additions and subtractions based on the input data (mem and img) and applies multiplication by complex twiddle factors (w and w_i).
+# 2. Stages 2-5: Repeat similar computations but with different grouping and computation arrangements.
+# The code follows a common structure seen in FFT algorithms where data is sequentially manipulated through stages, each refining the frequency domain representation of the input data.
+# The final output seems to be stored in final_ans_r and final_ans_i, which are arrays holding the computed real and imaginary parts of the FFT result.
+#
+
 # ********************************************************************
 # Module Function
 n = 0
