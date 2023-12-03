@@ -15,7 +15,7 @@ parameter latency_limit		= 68;
 
 parameter cycle			= 10.0;
 
-reg clk, reset, in_valid;
+reg clk, rst_n, in_valid;
 wire out_valid;
 reg signed [IN_width-1:0] din_r, din_i;
 wire signed [OUT_width-1:0] dout_r, dout_i;
@@ -28,8 +28,26 @@ always #(cycle/2.0) clk = ~clk;
 
 initial begin
 
+	`ifdef RTL
+		$fsdbDumpfile("FFT_RTL.fsdb");
+		$fsdbDumpvars(0, FFT_CORE);
+	`elsif GATE
+		$sdf_annotate("FFT_SYN.sdf",FFT_CORE);
+
+		`ifdef VCD
+			$dumpfile("FFT_GATE.vcd");
+			$dumpvars();
+		`elsif FSDB
+			$fsdbDumpfile("FFT_GATE.fsdb");
+			$fsdbDumpvars(0, FFT_CORE);
+		`endif
+	`endif
+end
+
+initial begin
+
 	clk = 0;
-	reset = 1;
+	rst_n = 1;
 	in_valid = 0;
 	signal_energy = 0;
 	noise_energy = 0;
@@ -43,24 +61,24 @@ initial begin
 		
 		case(i)
 		0: begin 
-			fp_r = $fopen("./Test_cases/IN_real_pattern01.txt", "r");
-			fp_i = $fopen("./Test_cases/IN_imag_pattern01.txt", "r");
+			fp_r = $fopen("../Test_pattern/input/IN_real_pattern01.txt", "r");
+			fp_i = $fopen("../Test_pattern/input/IN_imag_pattern01.txt", "r");
 		end
 		1: begin
-			fp_r = $fopen("./Test_cases/IN_real_pattern02.txt", "r");
-			fp_i = $fopen("./Test_cases/IN_imag_pattern02.txt", "r");
+			fp_r = $fopen("../Test_pattern/input/IN_real_pattern02.txt", "r");
+			fp_i = $fopen("../Test_pattern/input/IN_imag_pattern02.txt", "r");
 		end
                 2: begin
-                        fp_r = $fopen("./Test_cases/IN_real_pattern03.txt", "r");
-                        fp_i = $fopen("./Test_cases/IN_imag_pattern03.txt", "r");
+                        fp_r = $fopen("../Test_pattern/input/IN_real_pattern03.txt", "r");
+                        fp_i = $fopen("../Test_pattern/input/IN_imag_pattern03.txt", "r");
                 end
                 3: begin
-                        fp_r = $fopen("./Test_cases/IN_real_pattern04.txt", "r");
-                        fp_i = $fopen("./Test_cases/IN_imag_pattern04.txt", "r");
+                        fp_r = $fopen("../Test_pattern/input/IN_real_pattern04.txt", "r");
+                        fp_i = $fopen("../Test_pattern/input/IN_imag_pattern04.txt", "r");
                 end
                 4: begin
-                        fp_r = $fopen("./Test_cases/IN_real_pattern05.txt", "r");
-                        fp_i = $fopen("./Test_cases/IN_imag_pattern05.txt", "r");
+                        fp_r = $fopen("../Test_pattern/input/IN_real_pattern05.txt", "r");
+                        fp_i = $fopen("../Test_pattern/input/IN_imag_pattern05.txt", "r");
                 end
 		default: begin 
 			$display("Wrong dataset!? How could this happen?");
@@ -70,8 +88,8 @@ initial begin
 
 
 		@(negedge clk);
-		@(negedge clk) reset = 0;
-		@(negedge clk) reset = 1;
+		@(negedge clk) rst_n = 0;
+		@(negedge clk) rst_n = 1;
 		@(negedge clk);
 
 		for(j=0;j<FFT_size;j=j+1) begin
@@ -100,24 +118,24 @@ initial begin
 		// Read golden data
                 case(i)
                 0: begin
-                        fp_r = $fopen("./Test_cases/OUT_real_16_pattern01.txt", "r");
-                        fp_i = $fopen("./Test_cases/OUT_imag_16_pattern01.txt", "r");
+                        fp_r = $fopen("../Test_pattern/output/OUT_real_16_pattern01.txt", "r");
+                        fp_i = $fopen("../Test_pattern/output/OUT_imag_16_pattern01.txt", "r");
                 end
                 1: begin
-                        fp_r = $fopen("./Test_cases/OUT_real_16_pattern02.txt", "r");
-                        fp_i = $fopen("./Test_cases/OUT_imag_16_pattern02.txt", "r");
+                        fp_r = $fopen("../Test_pattern/output/OUT_real_16_pattern02.txt", "r");
+                        fp_i = $fopen("../Test_pattern/output/OUT_imag_16_pattern02.txt", "r");
                 end
                 2: begin
-                        fp_r = $fopen("./Test_cases/OUT_real_16_pattern03.txt", "r");
-                        fp_i = $fopen("./Test_cases/OUT_imag_16_pattern03.txt", "r");
+                        fp_r = $fopen("../Test_pattern/output/OUT_real_16_pattern03.txt", "r");
+                        fp_i = $fopen("../Test_pattern/output/OUT_imag_16_pattern03.txt", "r");
                 end
                 3: begin
-                        fp_r = $fopen("./Test_cases/OUT_real_16_pattern04.txt", "r");
-                        fp_i = $fopen("./Test_cases/OUT_imag_16_pattern04.txt", "r");
+                        fp_r = $fopen("../Test_pattern/output/OUT_real_16_pattern04.txt", "r");
+                        fp_i = $fopen("../Test_pattern/output/OUT_imag_16_pattern04.txt", "r");
                 end
                 4: begin
-                        fp_r = $fopen("./Test_cases/OUT_real_16_pattern05.txt", "r");
-                        fp_i = $fopen("./Test_cases/OUT_imag_16_pattern05.txt", "r");
+                        fp_r = $fopen("../Test_pattern/output/OUT_real_16_pattern05.txt", "r");
+                        fp_i = $fopen("../Test_pattern/output/OUT_imag_16_pattern05.txt", "r");
                 end
                 default: begin
                         $display("Wrong dataset!? No Way!");
@@ -174,12 +192,31 @@ initial begin
 
 	end
 
+	$display("\033[1;33m********************************\033[m");
+    	$display("\033[1;33mWell Done \033[m");
+    	$display("\033[1;33m********************************\033[m");
+    	$display("\033[1;35m      ▒~▒▒         \033[m");
+    	$display("\033[1;35m      ▒x▒x           \033[m");
+    	$display("\033[1;35m▒i▒X▒X▒}▒▒▒X▒▒          \033[m");
+    	$display("\033[1;35m▒i      ▒X▒X▒▒        \033[m");
+    	$display("\033[1;35m▒i   ▒@ ▒X▒X▒▒   You have passed all patterns!!\033[m");
+    	$display("\033[1;35m▒i▒š▒  ▒X▒X▒▒          \033[m");
+    	$display("\033[1;35m▒i   ▒▒▒X▒X▒▒         \033[m");
+    	$display("\033[1;35m                   \033[m");
+    	$display("\033[1;32m********************************\033[m");
+    	$display("\033[1;32m********************************\033[m");
+	$display("Clk period = %2.2f ns", cycle);
+	$display("Average latency = %2.2f cycles", latency_total/dataset);
+        $display("Bye\n\n");
+
+        $finish;
+
 
 end
 
 FFT FFT_CORE(
 .clk(clk),
-.reset(reset),
+.rst_n(rst_n),
 .in_valid(in_valid),
 .din_r(din_r),
 .din_i(din_i),
